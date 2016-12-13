@@ -40,7 +40,7 @@ for req in requirements:
 
 setup(
    name='dstore-sdk-python',
-   version='1.0.2.1',
+   version='1.0.2.2',
    author='dbap GmbH',
    author_email='',
    packages=find_packages(exclude=['tests']),
