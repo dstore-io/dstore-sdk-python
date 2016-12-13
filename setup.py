@@ -23,11 +23,10 @@ import sys
 
 from setuptools import find_packages
 
-try:
-   from setuptools import setup
-   setup  # workaround for pyflakes issue #13
-except ImportError:
-   from distutils.core import setup
+# Always prefer setuptools over distutils
+from setuptools import setup, find_packages
+# To use a consistent encoding
+from codecs import open
 
 requirements = open('requirements.txt').readlines()
 
@@ -41,17 +40,13 @@ for req in requirements:
 
 setup(
    name='dstore-sdk-python',
-   version='1.0.0',
+   version='1.0.2.1',
    author='dbap GmbH',
    author_email='',
    packages=find_packages(exclude=['tests']),
    url='http://www.dstore.de',
-   #data_files=[('conf', [os.path.join('conf', _) for _ in os.listdir('conf') if _.startswith('example-')]),
-   #            ('scripts', [os.path.join('scripts', _) for _ in os.listdir('scripts') if _.startswith('spam')]),
-   #            ('init.d', ['scripts/etc/init.d/lumbermill'])],
    include_package_data=True,
    install_requires=parsed_requirements,
-   license='LICENSE',
    classifiers=[ ],
    description='dStore SDK for Python lanaguage.',
    long_description=open('README.md').read() + '\n\n',
