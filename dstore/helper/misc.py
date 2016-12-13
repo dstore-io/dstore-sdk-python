@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import grpc
 
-def getChannel(server, port, pem_file_path, username=None, password=None, accesstoken=None):
+def getChannel(server, port, pem_file_path, username=None, password=None, accesstoken='default'):
     # Build channel credentials. If file is not present, throw error.
     with open(pem_file_path, 'r') as myfile:
         pem_data = myfile.read()
@@ -11,7 +11,7 @@ def getChannel(server, port, pem_file_path, username=None, password=None, access
     if username is not None and password is not None:
         call_credentials = grpc.metadata_call_credentials(lambda context, callback: callback([('dstore-username', username),
                                                                                               ('dstore-password', password),
-                                                                                              ('dstore-accesstoken', 'not used')], None),
+                                                                                              ('dstore-accesstoken', accesstoken)], None),
                                                           name='dstoreio_credentials')
         # Merge both credentials.
         channel_cerdentials = grpc.composite_channel_credentials(channel_cerdentials, call_credentials)
