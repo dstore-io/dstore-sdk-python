@@ -4,6 +4,17 @@ import grpc
 from DstoreMetadata import DstoreMetadata
 
 def getChannel(server, port, pem_file_path, username=None, password=None, accesstoken='default'):
+    """
+    Get a channel object.
+
+    :param str server: grpc server
+    :param int port: grpc server port
+    :param str pem_file_path: path to pem file
+    :param str username: grpc username
+    :param str password: grpc password
+    :param str accesstoken: grpc accesstoken
+    :return: channel
+    """
     # Build channel credentials. If file is not present, throw error.
     with open(pem_file_path, 'r') as myfile:
         pem_data = myfile.read()

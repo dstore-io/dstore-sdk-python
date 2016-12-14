@@ -7,18 +7,21 @@ import dstore.values_pb2
 from datetime import datetime
 from google.protobuf.timestamp_pb2 import Timestamp as ProtobufTimestamp
 
-TYPES_TO_TYPENAMES= {type(None): 'ProtobufNone',
-                     type(False): 'ProtobufBoolean',
-                     type(1): 'ProtobufInteger',
-                     type(0.1): 'ProtobufFloat',
-                     type(''): 'ProtobufString',
-                     type(u''): 'ProtobufUnicode',
-                     type(()): 'ProtobufTuple',
-                     type([]): 'ProtobufList',
-                     type({}): 'ProtobufDictionary',
-                     type(ProtobufTimestamp()): 'NativeTimestamp'}
+ORIG_TYPES_TO_CONV_TYPE = { type(None): 'ProtobufNone',
+                            type(False): 'ProtobufBoolean',
+                            type(1): 'ProtobufInteger',
+                            type(0.1): 'ProtobufFloat',
+                            type(''): 'ProtobufString',
+                            type(u''): 'ProtobufUnicode',
+                            type(()): 'ProtobufTuple',
+                            type([]): 'ProtobufList',
+                            type({}): 'ProtobufDictionary',
+                            type(ProtobufTimestamp()): 'NativeTimestamp'}
 
 class ValuesHelper(object):
+    """
+    Convinience class to convert a native python value to a grpc value or vice versa.
+    """
 
     logger = logging.getLogger('ValuesHelper')
     logging.basicConfig(level=logging.INFO,
@@ -28,16 +31,23 @@ class ValuesHelper(object):
 
     @staticmethod
     def buildValue(value_content):
+        """
+        This method tries to guess the target value type by the source value type, using the ORIG_TYPES_TO_CONV_TYPE
+        mapping.
+
+        :param value_content
+        :return: converted_value
+        """
         value_type = type(value_content)
         try:
-            return getattr(ValuesHelper, "build%sValue" % TYPES_TO_TYPENAMES[value_type])(value_content)
+            return getattr(ValuesHelper, "build%sValue" % ORIG_TYPES_TO_CONV_TYPE[value_type])(value_content)
         except KeyError:
             etype, evalue, etb = sys.exc_info()
             ValuesHelper.logger.error("Unkown value type: %s. Exception: %s, Error: %s" % (value_type, etype, evalue))
             sys.exit(255)
         except AttributeError:
             etype, evalue, etb = sys.exc_info()
-            ValuesHelper.logger.error("No method build%sValue exists. Exception: %s, Error: %s" % (TYPES_TO_TYPENAMES[value_type], etype, evalue))
+            ValuesHelper.logger.error("No method build%sValue exists. Exception: %s, Error: %s" % (ORIG_TYPES_TO_CONV_TYPE[value_type], etype, evalue))
             sys.exit(255)
 
     @staticmethod
