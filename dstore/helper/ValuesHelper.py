@@ -20,7 +20,7 @@ ORIG_TYPES_TO_CONV_TYPE = { type(None): 'ProtobufNone',
 
 class ValuesHelper(object):
     """
-    Convinience class to convert a native python value to a grpc value or vice versa.
+    Convenience class to convert a native python value to a grpc value or vice versa.
     """
 
     logger = logging.getLogger('ValuesHelper')

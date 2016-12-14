@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 class DstoreMetadata:
     """
-    Convinience class to deal with different kind of metadata provided by the dstoreIO grpc server.
+    Convenience class to deal with different kind of metadata provided by the dstoreIO grpc server.
     """
 
     ENGINE_RETURN_STATUS_KEY = 'dstore-engine-returnstatus'
