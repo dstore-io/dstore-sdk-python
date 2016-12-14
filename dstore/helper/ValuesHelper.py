@@ -2,17 +2,21 @@
 # -*- coding: utf-8 -*-
 import logging
 import sys
+import time
 import dstore.values_pb2
+from datetime import datetime
+from google.protobuf.timestamp_pb2 import Timestamp as ProtobufTimestamp
 
-TYPES_TO_TYPENAMES= {type(None): 'None',
-                     type(False): 'Boolean',
-                     type(1): 'Integer',
-                     type(0.1): 'Float',
-                     type(''): 'String',
-                     type(u''): 'Unicode',
-                     type(()): 'Tuple',
-                     type([]): 'List',
-                     type({}): 'Dictionary'}
+TYPES_TO_TYPENAMES= {type(None): 'ProtobufNone',
+                     type(False): 'ProtobufBoolean',
+                     type(1): 'ProtobufInteger',
+                     type(0.1): 'ProtobufFloat',
+                     type(''): 'ProtobufString',
+                     type(u''): 'ProtobufUnicode',
+                     type(()): 'ProtobufTuple',
+                     type([]): 'ProtobufList',
+                     type({}): 'ProtobufDictionary',
+                     type(ProtobufTimestamp()): 'NativeTimestamp'}
 
 class ValuesHelper(object):
 
@@ -33,53 +37,69 @@ class ValuesHelper(object):
             sys.exit(255)
         except AttributeError:
             etype, evalue, etb = sys.exc_info()
-            ValuesHelper.logger.error("No method %s exists. Exception: %s, Error: %s" % (value_type, etype, evalue))
+            ValuesHelper.logger.error("No method build%sValue exists. Exception: %s, Error: %s" % (TYPES_TO_TYPENAMES[value_type], etype, evalue))
             sys.exit(255)
 
     @staticmethod
-    def buildIntegerValue(value_content):
+    def buildProtobufIntegerValue(value_content):
         int_value = dstore.values_pb2.integerValue()
         int_value.value = value_content
         return int_value
 
     @staticmethod
-    def buildStringValue(value_content):
+    def buildProtobufStringValue(value_content):
         string_value = dstore.values_pb2.stringValue()
         string_value.value = value_content
         return string_value
 
     @staticmethod
-    def buildBytesValue(value_content):
+    def buildProtobufBytesValue(value_content):
         bytes_value = dstore.values_pb2.bytesValue()
         bytes_value.value = value_content
         return bytes_value
 
     @staticmethod
-    def buildDoubleValue(value_content):
+    def buildProtobufDoubleValue(value_content):
         double_value = dstore.values_pb2.doubleValue()
         double_value.value = value_content
         return double_value
 
     @staticmethod
-    def buildBooleanValue(value_content):
+    def buildProtobufBooleanValue(value_content):
         bool_value = dstore.values_pb2.booleanValue()
         bool_value.value = value_content
         return bool_value
 
     @staticmethod
-    def buildDecimalValue(value_content):
+    def buildProtobufDecimalValue(value_content):
         decimal_value = dstore.values_pb2.decimalValue()
         decimal_value.value = value_content
         return decimal_value
 
     @staticmethod
-    def buildTimestampValue(value_content):
+    def buildProtobufTimestampValue(value_content):
         timestamp_value = dstore.values_pb2.timestampValue()
         timestamp_value.value = value_content
         return timestamp_value
 
     @staticmethod
-    def buildLongValue(value_content):
+    def buildProtobufLongValue(value_content):
         long_value = dstore.values_pb2.longValue()
         long_value.value = value_content
         return long_value
+
+    @staticmethod
+    def buildNativeTimestampValue(value_content):
+        datetime_obj = datetime.utcfromtimestamp(float('%s.%s' % (value_content.seconds, value_content.nanos)))
+        timestamp_value = time.mktime(datetime_obj.timetuple())
+        return timestamp_value
+
+    @staticmethod
+    def buildNativeDatetimeValue(value_content):
+        datetime_obj = datetime.utcfromtimestamp(float('%s.%s' % (value_content.seconds, value_content.nanos)))
+        return datetime_obj
+
+    @staticmethod
+    def buildNativeDecimalValue(value_content):
+        decimal_value = float(value_content)
+        return decimal_value
