@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/im_GetRandomProduct_Pu.proto',
   package='dstore.engine.im_GetRandomProduct_Pu',
   syntax='proto3',
-  serialized_pb=_b('\n5dstore/engine/procedures/im_GetRandomProduct_Pu.proto\x12$dstore.engine.im_GetRandomProduct_Pu\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xeb\x04\n\nParameters\x12\x31\n\x0ctree_node_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1a\n\x11tree_node_id_null\x18\xe9\x07 \x01(\x08\x12>\n\x19number_of_random_products\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\'\n\x1enumber_of_random_products_null\x18\xea\x07 \x01(\x08\x12\x43\n\x1e\x62inary_characteristic_value_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12,\n#binary_characteristic_value_id_null\x18\xeb\x07 \x01(\x08\x12@\n\x1b\x66ilter_by_characteristic_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12)\n filter_by_characteristic_id_null\x18\xec\x07 \x01(\x08\x12:\n\x16\x66ilter_by_charac_value\x18\x05 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12$\n\x1b\x66ilter_by_charac_value_null\x18\xed\x07 \x01(\x08\x12<\n\x17negate_filter_by_params\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12%\n\x1cnegate_filter_by_params_null\x18\xee\x07 \x01(\x08\"\xc9\x02\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.im_GetRandomProduct_Pu.Response.Row\x1a\x80\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x34\n\x0e\x62inary_code_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x32\n\x0ctree_node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/im_GetRandomProduct_Pub\x06proto3')
+  serialized_pb=_b('\n5dstore/engine/procedures/im_GetRandomProduct_Pu.proto\x12$dstore.engine.im_GetRandomProduct_Pu\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xeb\x04\n\nParameters\x12\x31\n\x0ctree_node_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1a\n\x11tree_node_id_null\x18\xe9\x07 \x01(\x08\x12>\n\x19number_of_random_products\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\'\n\x1enumber_of_random_products_null\x18\xea\x07 \x01(\x08\x12\x43\n\x1e\x62inary_characteristic_value_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12,\n#binary_characteristic_value_id_null\x18\xeb\x07 \x01(\x08\x12@\n\x1b\x66ilter_by_characteristic_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12)\n filter_by_characteristic_id_null\x18\xec\x07 \x01(\x08\x12:\n\x16\x66ilter_by_charac_value\x18\x05 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12$\n\x1b\x66ilter_by_charac_value_null\x18\xed\x07 \x01(\x08\x12<\n\x17negate_filter_by_params\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12%\n\x1cnegate_filter_by_params_null\x18\xee\x07 \x01(\x08\"\xb1\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.im_GetRandomProduct_Pu.Response.Row\x1a\x80\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x34\n\x0e\x62inary_code_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x32\n\x0ctree_node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/im_GetRandomProduct_Pub\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -133,8 +132,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=802,
+  serialized_start=145,
+  serialized_end=764,
 )
 
 
@@ -178,8 +177,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1006,
-  serialized_end=1134,
+  serialized_start=944,
+  serialized_end=1072,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -222,8 +221,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=805,
-  serialized_end=1134,
+  serialized_start=767,
+  serialized_end=1072,
 )
 
 _PARAMETERS.fields_by_name['tree_node_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -235,8 +234,8 @@ _PARAMETERS.fields_by_name['negate_filter_by_params'].message_type = dstore_dot_
 _RESPONSE_ROW.fields_by_name['binary_code_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['tree_node_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

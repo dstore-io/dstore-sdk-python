@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedure.proto',
   package='dstore.engine.procedure',
   syntax='proto3',
-  serialized_pb=_b('\n\x1d\x64store/engine/procedure.proto\x12\x17\x64store.engine.procedure\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"f\n\x04\x43\x61ll\x12\x16\n\x0eprocedure_name\x18\x01 \x01(\t\x12\x35\n\tparameter\x18\x02 \x03(\x0b\x32\".dstore.engine.procedure.Parameter\x12\x0f\n\x07\x63\x61ll_id\x18\x03 \x01(\x05\"9\n\tParameter\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x0f\n\x07is_null\x18\x03 \x01(\x08\"\x90\x04\n\x08Response\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x0f\n\x07\x63\x61ll_id\x18\x04 \x01(\x05\x12\x32\n\x03row\x18\x05 \x03(\x0b\x32%.dstore.engine.procedure.Response.Row\x12R\n\x11output_parameters\x18\x06 \x03(\x0b\x32\x37.dstore.engine.procedure.Response.OutputParametersEntry\x12H\n\x10meta_information\x18\x07 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x1aM\n\x15OutputParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.dstore.values.Value:\x02\x38\x01\x1a\xa0\x01\n\x03Row\x12\x0e\n\x06row_id\x18\x01 \x01(\x05\x12\x43\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x32.dstore.engine.procedure.Response.Row.ColumnsEntry\x1a\x44\n\x0c\x43olumnsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.dstore.values.Value:\x02\x38\x01\x42\x34\n\x10io.dstore.engineZ gosdk.dstore.de/engine/procedureb\x06proto3')
+  serialized_pb=_b('\n\x1d\x64store/engine/procedure.proto\x12\x17\x64store.engine.procedure\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"f\n\x04\x43\x61ll\x12\x16\n\x0eprocedure_name\x18\x01 \x01(\t\x12\x35\n\tparameter\x18\x02 \x03(\x0b\x32\".dstore.engine.procedure.Parameter\x12\x0f\n\x07\x63\x61ll_id\x18\x03 \x01(\x05\"9\n\tParameter\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x0f\n\x07is_null\x18\x03 \x01(\x08\"\xf8\x03\n\x08Response\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x0f\n\x07\x63\x61ll_id\x18\x04 \x01(\x05\x12\x32\n\x03row\x18\x05 \x03(\x0b\x32%.dstore.engine.procedure.Response.Row\x12R\n\x11output_parameters\x18\x06 \x03(\x0b\x32\x37.dstore.engine.procedure.Response.OutputParametersEntry\x12\x38\n\x10meta_information\x18\x07 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x1aM\n\x15OutputParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.dstore.values.Value:\x02\x38\x01\x1a\xa0\x01\n\x03Row\x12\x0e\n\x06row_id\x18\x01 \x01(\x05\x12\x43\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x32.dstore.engine.procedure.Response.Row.ColumnsEntry\x1a\x44\n\x0c\x43olumnsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.dstore.values.Value:\x02\x38\x01\x42\x34\n\x10io.dstore.engineZ gosdk.dstore.de/engine/procedureb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -70,8 +69,8 @@ _CALL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=145,
-  serialized_end=247,
+  serialized_start=107,
+  serialized_end=209,
 )
 
 
@@ -115,8 +114,8 @@ _PARAMETER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=249,
-  serialized_end=306,
+  serialized_start=211,
+  serialized_end=268,
 )
 
 
@@ -153,8 +152,8 @@ _RESPONSE_OUTPUTPARAMETERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=597,
-  serialized_end=674,
+  serialized_start=535,
+  serialized_end=612,
 )
 
 _RESPONSE_ROW_COLUMNSENTRY = _descriptor.Descriptor(
@@ -190,8 +189,8 @@ _RESPONSE_ROW_COLUMNSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=769,
-  serialized_end=837,
+  serialized_start=707,
+  serialized_end=775,
 )
 
 _RESPONSE_ROW = _descriptor.Descriptor(
@@ -227,8 +226,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=677,
-  serialized_end=837,
+  serialized_start=615,
+  serialized_end=775,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -285,8 +284,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=837,
+  serialized_start=271,
+  serialized_end=775,
 )
 
 _CALL.fields_by_name['parameter'].message_type = _PARAMETER
@@ -296,10 +295,10 @@ _RESPONSE_ROW_COLUMNSENTRY.fields_by_name['value'].message_type = dstore_dot_val
 _RESPONSE_ROW_COLUMNSENTRY.containing_type = _RESPONSE_ROW
 _RESPONSE_ROW.fields_by_name['columns'].message_type = _RESPONSE_ROW_COLUMNSENTRY
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['output_parameters'].message_type = _RESPONSE_OUTPUTPARAMETERSENTRY
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
 DESCRIPTOR.message_types_by_name['Call'] = _CALL
 DESCRIPTOR.message_types_by_name['Parameter'] = _PARAMETER
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

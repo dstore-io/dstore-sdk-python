@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/pm_ModifyPersonData_Ad.proto',
   package='dstore.engine.pm_ModifyPersonData_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n5dstore/engine/procedures/pm_ModifyPersonData_Ad.proto\x12$dstore.engine.pm_ModifyPersonData_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x88\x08\n\nParameters\x12.\n\tperson_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x17\n\x0eperson_id_null\x18\xe9\x07 \x01(\x08\x12:\n\x16\x63haracteristic_id_list\x18\x02 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12$\n\x1b\x63haracteristic_id_list_null\x18\xea\x07 \x01(\x08\x12.\n\nvalue_list\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0fvalue_list_null\x18\xeb\x07 \x01(\x08\x12\x31\n\rerror_id_list\x18\x04 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x1b\n\x12\x65rror_id_list_null\x18\xec\x07 \x01(\x08\x12>\n\x19person_charac_category_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\'\n\x1eperson_charac_category_id_null\x18\xed\x07 \x01(\x08\x12>\n\x19\x64\x65lete_charac_category_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\'\n\x1e\x64\x65lete_charac_category_id_null\x18\xee\x07 \x01(\x08\x12<\n\x17result_in_error_id_list\x18\x07 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12%\n\x1cresult_in_error_id_list_null\x18\xef\x07 \x01(\x08\x12\x45\n value_ids_for_predefined_characs\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12.\n%value_ids_for_predefined_characs_null\x18\xf0\x07 \x01(\x08\x12:\n\x15\x63hange_all_or_nothing\x18\t \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12#\n\x1a\x63hange_all_or_nothing_null\x18\xf1\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\n \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x15\n\x0c\x63ountry_null\x18\xf2\x07 \x01(\x08\x12;\n\x17separator_in_value_list\x18\x0b \x01(\x0b\x32\x1a.dstore.values.stringValue\x12%\n\x1cseparator_in_value_list_null\x18\xf3\x07 \x01(\x08\"\x85\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.pm_ModifyPersonData_Ad.Response.Row\x12\x31\n\rerror_id_list\x18\x65 \x01(\x0b\x32\x1a.dstore.values.stringValue\x1a\x89\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12>\n\x18person_characteristic_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x31\n\x0bresult_code\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/pm_ModifyPersonData_Adb\x06proto3')
+  serialized_pb=_b('\n5dstore/engine/procedures/pm_ModifyPersonData_Ad.proto\x12$dstore.engine.pm_ModifyPersonData_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x88\x08\n\nParameters\x12.\n\tperson_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x17\n\x0eperson_id_null\x18\xe9\x07 \x01(\x08\x12:\n\x16\x63haracteristic_id_list\x18\x02 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12$\n\x1b\x63haracteristic_id_list_null\x18\xea\x07 \x01(\x08\x12.\n\nvalue_list\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0fvalue_list_null\x18\xeb\x07 \x01(\x08\x12\x31\n\rerror_id_list\x18\x04 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x1b\n\x12\x65rror_id_list_null\x18\xec\x07 \x01(\x08\x12>\n\x19person_charac_category_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\'\n\x1eperson_charac_category_id_null\x18\xed\x07 \x01(\x08\x12>\n\x19\x64\x65lete_charac_category_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\'\n\x1e\x64\x65lete_charac_category_id_null\x18\xee\x07 \x01(\x08\x12<\n\x17result_in_error_id_list\x18\x07 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12%\n\x1cresult_in_error_id_list_null\x18\xef\x07 \x01(\x08\x12\x45\n value_ids_for_predefined_characs\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12.\n%value_ids_for_predefined_characs_null\x18\xf0\x07 \x01(\x08\x12:\n\x15\x63hange_all_or_nothing\x18\t \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12#\n\x1a\x63hange_all_or_nothing_null\x18\xf1\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\n \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x15\n\x0c\x63ountry_null\x18\xf2\x07 \x01(\x08\x12;\n\x17separator_in_value_list\x18\x0b \x01(\x0b\x32\x1a.dstore.values.StringValue\x12%\n\x1cseparator_in_value_list_null\x18\xf3\x07 \x01(\x08\"\xed\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.pm_ModifyPersonData_Ad.Response.Row\x12\x31\n\rerror_id_list\x18\x65 \x01(\x0b\x32\x1a.dstore.values.StringValue\x1a\x89\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12>\n\x18person_characteristic_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x31\n\x0bresult_code\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/pm_ModifyPersonData_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -203,8 +202,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=1215,
+  serialized_start=145,
+  serialized_end=1177,
 )
 
 
@@ -248,8 +247,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1470,
-  serialized_end=1607,
+  serialized_start=1408,
+  serialized_end=1545,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -299,8 +298,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1218,
-  serialized_end=1607,
+  serialized_start=1180,
+  serialized_end=1545,
 )
 
 _PARAMETERS.fields_by_name['person_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -317,8 +316,8 @@ _PARAMETERS.fields_by_name['separator_in_value_list'].message_type = dstore_dot_
 _RESPONSE_ROW.fields_by_name['person_characteristic_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['result_code'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['error_id_list'].message_type = dstore_dot_values__pb2._STRINGVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

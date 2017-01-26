@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_CreateSimpleCampItemCond_Ad.proto',
   package='dstore.engine.om_CreateSimpleCampItemCond_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n=dstore/engine/procedures/om_CreateSimpleCampItemCond_Ad.proto\x12,dstore.engine.om_CreateSimpleCampItemCond_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x80\x13\n\nParameters\x12\x30\n\x0b\x63\x61mpaign_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10\x63\x61mpaign_id_null\x18\xe9\x07 \x01(\x08\x12\x39\n\x15\x63ondition_description\x18\x02 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12#\n\x1a\x63ondition_description_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0c\x63ondition_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1a\n\x11\x63ondition_id_null\x18\xeb\x07 \x01(\x08\x12\x36\n\x11item_condition_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1f\n\x16item_condition_id_null\x18\xec\x07 \x01(\x08\x12<\n\x17item_condition_group_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12%\n\x1citem_condition_group_id_null\x18\xed\x07 \x01(\x08\x12;\n\x16item_condition_part_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12$\n\x1bitem_condition_part_id_null\x18\xee\x07 \x01(\x08\x12-\n\tlevel_ids\x18\x07 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x17\n\x0elevel_ids_null\x18\xef\x07 \x01(\x08\x12\x38\n\x14\x64omain_tree_node_ids\x18\x08 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\"\n\x19\x64omain_tree_node_ids_null\x18\xf0\x07 \x01(\x08\x12;\n\x16node_characteristic_id\x18\t \x01(\x0b\x32\x1b.dstore.values.integerValue\x12$\n\x1bnode_characteristic_id_null\x18\xf1\x07 \x01(\x08\x12-\n\toperator1\x18\n \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x17\n\x0eoperator1_null\x18\xf2\x07 \x01(\x08\x12.\n\ncondition1\x18\x0b \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0f\x63ondition1_null\x18\xf3\x07 \x01(\x08\x12-\n\toperator2\x18\x0c \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x17\n\x0eoperator2_null\x18\xf4\x07 \x01(\x08\x12.\n\ncondition2\x18\r \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0f\x63ondition2_null\x18\xf5\x07 \x01(\x08\x12\x32\n\rinherit_depth\x18\x0e \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1b\n\x12inherit_depth_null\x18\xf6\x07 \x01(\x08\x12\x39\n\x14recursive_evaluation\x18\x0f \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\"\n\x19recursive_evaluation_null\x18\xf7\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\x10 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x15\n\x0c\x63ountry_null\x18\xf8\x07 \x01(\x08\x12\x42\n\x1e\x65xtended_condition_description\x18\x11 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12,\n#extended_condition_description_null\x18\xf9\x07 \x01(\x08\x12\x38\n\x13min_number_of_items\x18\x12 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12!\n\x18min_number_of_items_null\x18\xfa\x07 \x01(\x08\x12\x38\n\x13max_number_of_items\x18\x13 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12!\n\x18max_number_of_items_null\x18\xfb\x07 \x01(\x08\x12\x32\n\rfrom_quantity\x18\x14 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1b\n\x12\x66rom_quantity_null\x18\xfc\x07 \x01(\x08\x12\x30\n\x0bto_quantity\x18\x15 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10to_quantity_null\x18\xfd\x07 \x01(\x08\x12:\n\x15\x66rom_item_basic_price\x18\x16 \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12#\n\x1a\x66rom_item_basic_price_null\x18\xfe\x07 \x01(\x08\x12\x38\n\x13to_item_basic_price\x18\x17 \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12!\n\x18to_item_basic_price_null\x18\xff\x07 \x01(\x08\x12\x39\n\x14\x66rom_basic_price_sum\x18\x18 \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\"\n\x19\x66rom_basic_price_sum_null\x18\x80\x08 \x01(\x08\x12\x37\n\x12to_basic_price_sum\x18\x19 \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12 \n\x17to_basic_price_sum_null\x18\x81\x08 \x01(\x08\x12G\n\"combine_groups_with_a_n_d_operator\x18\x1a \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x30\n\'combine_groups_with_a_n_d_operator_null\x18\x82\x08 \x01(\x08\x12\x46\n!combine_parts_with_a_n_d_operator\x18\x1b \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12/\n&combine_parts_with_a_n_d_operator_null\x18\x83\x08 \x01(\x08\"\xcc\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.om_CreateSimpleCampItemCond_Ad.Response.Row\x12\x31\n\x0c\x63ondition_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x36\n\x11item_condition_id\x18\x66 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12<\n\x17item_condition_group_id\x18g \x01(\x0b\x32\x1b.dstore.values.integerValue\x12;\n\x16item_condition_part_id\x18h \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/om_CreateSimpleCampItemCond_Adb\x06proto3')
+  serialized_pb=_b('\n=dstore/engine/procedures/om_CreateSimpleCampItemCond_Ad.proto\x12,dstore.engine.om_CreateSimpleCampItemCond_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x80\x13\n\nParameters\x12\x30\n\x0b\x63\x61mpaign_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10\x63\x61mpaign_id_null\x18\xe9\x07 \x01(\x08\x12\x39\n\x15\x63ondition_description\x18\x02 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12#\n\x1a\x63ondition_description_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0c\x63ondition_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1a\n\x11\x63ondition_id_null\x18\xeb\x07 \x01(\x08\x12\x36\n\x11item_condition_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1f\n\x16item_condition_id_null\x18\xec\x07 \x01(\x08\x12<\n\x17item_condition_group_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12%\n\x1citem_condition_group_id_null\x18\xed\x07 \x01(\x08\x12;\n\x16item_condition_part_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12$\n\x1bitem_condition_part_id_null\x18\xee\x07 \x01(\x08\x12-\n\tlevel_ids\x18\x07 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x17\n\x0elevel_ids_null\x18\xef\x07 \x01(\x08\x12\x38\n\x14\x64omain_tree_node_ids\x18\x08 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\"\n\x19\x64omain_tree_node_ids_null\x18\xf0\x07 \x01(\x08\x12;\n\x16node_characteristic_id\x18\t \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12$\n\x1bnode_characteristic_id_null\x18\xf1\x07 \x01(\x08\x12-\n\toperator1\x18\n \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x17\n\x0eoperator1_null\x18\xf2\x07 \x01(\x08\x12.\n\ncondition1\x18\x0b \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0f\x63ondition1_null\x18\xf3\x07 \x01(\x08\x12-\n\toperator2\x18\x0c \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x17\n\x0eoperator2_null\x18\xf4\x07 \x01(\x08\x12.\n\ncondition2\x18\r \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0f\x63ondition2_null\x18\xf5\x07 \x01(\x08\x12\x32\n\rinherit_depth\x18\x0e \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1b\n\x12inherit_depth_null\x18\xf6\x07 \x01(\x08\x12\x39\n\x14recursive_evaluation\x18\x0f \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\"\n\x19recursive_evaluation_null\x18\xf7\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\x10 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x15\n\x0c\x63ountry_null\x18\xf8\x07 \x01(\x08\x12\x42\n\x1e\x65xtended_condition_description\x18\x11 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12,\n#extended_condition_description_null\x18\xf9\x07 \x01(\x08\x12\x38\n\x13min_number_of_items\x18\x12 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12!\n\x18min_number_of_items_null\x18\xfa\x07 \x01(\x08\x12\x38\n\x13max_number_of_items\x18\x13 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12!\n\x18max_number_of_items_null\x18\xfb\x07 \x01(\x08\x12\x32\n\rfrom_quantity\x18\x14 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1b\n\x12\x66rom_quantity_null\x18\xfc\x07 \x01(\x08\x12\x30\n\x0bto_quantity\x18\x15 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10to_quantity_null\x18\xfd\x07 \x01(\x08\x12:\n\x15\x66rom_item_basic_price\x18\x16 \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12#\n\x1a\x66rom_item_basic_price_null\x18\xfe\x07 \x01(\x08\x12\x38\n\x13to_item_basic_price\x18\x17 \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12!\n\x18to_item_basic_price_null\x18\xff\x07 \x01(\x08\x12\x39\n\x14\x66rom_basic_price_sum\x18\x18 \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\"\n\x19\x66rom_basic_price_sum_null\x18\x80\x08 \x01(\x08\x12\x37\n\x12to_basic_price_sum\x18\x19 \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12 \n\x17to_basic_price_sum_null\x18\x81\x08 \x01(\x08\x12G\n\"combine_groups_with_a_n_d_operator\x18\x1a \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x30\n\'combine_groups_with_a_n_d_operator_null\x18\x82\x08 \x01(\x08\x12\x46\n!combine_parts_with_a_n_d_operator\x18\x1b \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12/\n&combine_parts_with_a_n_d_operator_null\x18\x83\x08 \x01(\x08\"\xb4\x03\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.om_CreateSimpleCampItemCond_Ad.Response.Row\x12\x31\n\x0c\x63ondition_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x36\n\x11item_condition_id\x18\x66 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12<\n\x17item_condition_group_id\x18g \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12;\n\x16item_condition_part_id\x18h \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/om_CreateSimpleCampItemCond_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -427,8 +426,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=2631,
+  serialized_start=161,
+  serialized_end=2593,
 )
 
 
@@ -458,8 +457,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3072,
-  serialized_end=3094,
+  serialized_start=3010,
+  serialized_end=3032,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -530,8 +529,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2634,
-  serialized_end=3094,
+  serialized_start=2596,
+  serialized_end=3032,
 )
 
 _PARAMETERS.fields_by_name['campaign_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -562,8 +561,8 @@ _PARAMETERS.fields_by_name['to_basic_price_sum'].message_type = dstore_dot_value
 _PARAMETERS.fields_by_name['combine_groups_with_a_n_d_operator'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _PARAMETERS.fields_by_name['combine_parts_with_a_n_d_operator'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['condition_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE.fields_by_name['item_condition_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE

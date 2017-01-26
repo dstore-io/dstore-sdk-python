@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/im_GetBinaryCodeIDsForValue_Pu.proto',
   package='dstore.engine.im_GetBinaryCodeIDsForValue_Pu',
   syntax='proto3',
-  serialized_pb=_b('\n=dstore/engine/procedures/im_GetBinaryCodeIDsForValue_Pu.proto\x12,dstore.engine.im_GetBinaryCodeIDsForValue_Pu\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x99\x04\n\nParameters\x12-\n\x08value_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rvalue_id_null\x18\xe9\x07 \x01(\x08\x12=\n\x18\x62inary_property_value_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12&\n\x1d\x62inary_property_value_id_null\x18\xea\x07 \x01(\x08\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x13\n\nvalue_null\x18\xeb\x07 \x01(\x08\x12;\n\x16node_characteristic_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12$\n\x1bnode_characteristic_id_null\x18\xec\x07 \x01(\x08\x12\x38\n\x13value_ids_in_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12!\n\x18value_ids_in_one_id_null\x18\xed\x07 \x01(\x08\x12\x39\n\x14values_in_any_values\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\"\n\x19values_in_any_values_null\x18\xee\x07 \x01(\x08\"\xb9\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.im_GetBinaryCodeIDsForValue_Pu.Response.Row\x1a\xe8\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x34\n\x0e\x62inary_code_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12.\n\x08value_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12=\n\x16node_characteristic_id\x18\xb2\xea\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12+\n\x05value\x18\xb3\xea\x01 \x01(\x0b\x32\x1a.dstore.values.stringValueB_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/im_GetBinaryCodeIDsForValue_Pub\x06proto3')
+  serialized_pb=_b('\n=dstore/engine/procedures/im_GetBinaryCodeIDsForValue_Pu.proto\x12,dstore.engine.im_GetBinaryCodeIDsForValue_Pu\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x99\x04\n\nParameters\x12-\n\x08value_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rvalue_id_null\x18\xe9\x07 \x01(\x08\x12=\n\x18\x62inary_property_value_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12&\n\x1d\x62inary_property_value_id_null\x18\xea\x07 \x01(\x08\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x13\n\nvalue_null\x18\xeb\x07 \x01(\x08\x12;\n\x16node_characteristic_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12$\n\x1bnode_characteristic_id_null\x18\xec\x07 \x01(\x08\x12\x38\n\x13value_ids_in_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12!\n\x18value_ids_in_one_id_null\x18\xed\x07 \x01(\x08\x12\x39\n\x14values_in_any_values\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\"\n\x19values_in_any_values_null\x18\xee\x07 \x01(\x08\"\xa1\x03\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.im_GetBinaryCodeIDsForValue_Pu.Response.Row\x1a\xe8\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x34\n\x0e\x62inary_code_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12.\n\x08value_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12=\n\x16node_characteristic_id\x18\xb2\xea\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12+\n\x05value\x18\xb3\xea\x01 \x01(\x0b\x32\x1a.dstore.values.StringValueB_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/im_GetBinaryCodeIDsForValue_Pub\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -133,8 +132,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=736,
+  serialized_start=161,
+  serialized_end=698,
 )
 
 
@@ -192,8 +191,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=1180,
+  serialized_start=886,
+  serialized_end=1118,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -236,8 +235,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=739,
-  serialized_end=1180,
+  serialized_start=701,
+  serialized_end=1118,
 )
 
 _PARAMETERS.fields_by_name['value_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -251,8 +250,8 @@ _RESPONSE_ROW.fields_by_name['value_id'].message_type = dstore_dot_values__pb2._
 _RESPONSE_ROW.fields_by_name['node_characteristic_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['value'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

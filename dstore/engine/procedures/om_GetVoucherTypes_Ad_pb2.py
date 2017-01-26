@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_GetVoucherTypes_Ad.proto',
   package='dstore.engine.om_GetVoucherTypes_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n4dstore/engine/procedures/om_GetVoucherTypes_Ad.proto\x12#dstore.engine.om_GetVoucherTypes_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xd5\x03\n\nParameters\x12\x34\n\x0fvoucher_type_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1d\n\x14voucher_type_id_null\x18\xe9\x07 \x01(\x08\x12:\n\x15v_code_origin_type_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12#\n\x1av_code_origin_type_id_null\x18\xea\x07 \x01(\x08\x12\x30\n\x0b\x63ode_status\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10\x63ode_status_null\x18\xeb\x07 \x01(\x08\x12?\n\x1asort_by_code_creation_date\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12(\n\x1fsort_by_code_creation_date_null\x18\xec\x07 \x01(\x08\x12\x37\n\x12output_into_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12 \n\x17output_into_one_id_null\x18\xed\x07 \x01(\x08\"\xd7\x07\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12>\n\x03row\x18\x04 \x03(\x0b\x32\x31.dstore.engine.om_GetVoucherTypes_Ad.Response.Row\x1a\x8f\x06\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x37\n\x12v_code_origin_type\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12;\n\x13\x64\x65\x66\x61ult_valid_until\x18\x92N \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x37\n\x12generation_pattern\x18\x93N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x36\n\x10valid_for_x_days\x18\x94N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x35\n\x0fvoucher_type_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12?\n\x19x_times_usable_per_person\x18\x96N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12=\n\x18voucher_type_description\x18\x97N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x34\n\x0ex_times_usable\x18\x98N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12;\n\x15v_code_origin_type_id\x18\x99N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x31\n\x0b\x63ode_status\x18\x9aN \x01(\x0b\x32\x1b.dstore.values.integerValue\x12=\n\x18\x62\x65nefit_type_description\x18\x9bN \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x35\n\x0f\x62\x65nefit_type_id\x18\x9cN \x01(\x0b\x32\x1b.dstore.values.integerValue\x12=\n\x14last_code_created_at\x18\xaa\x9c\x01 \x01(\x0b\x32\x1d.dstore.values.timestampValueBV\n\x1bio.dstore.engine.proceduresZ7gosdk.dstore.de/engine/procedures/om_GetVoucherTypes_Adb\x06proto3')
+  serialized_pb=_b('\n4dstore/engine/procedures/om_GetVoucherTypes_Ad.proto\x12#dstore.engine.om_GetVoucherTypes_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xd5\x03\n\nParameters\x12\x34\n\x0fvoucher_type_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1d\n\x14voucher_type_id_null\x18\xe9\x07 \x01(\x08\x12:\n\x15v_code_origin_type_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12#\n\x1av_code_origin_type_id_null\x18\xea\x07 \x01(\x08\x12\x30\n\x0b\x63ode_status\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10\x63ode_status_null\x18\xeb\x07 \x01(\x08\x12?\n\x1asort_by_code_creation_date\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12(\n\x1fsort_by_code_creation_date_null\x18\xec\x07 \x01(\x08\x12\x37\n\x12output_into_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12 \n\x17output_into_one_id_null\x18\xed\x07 \x01(\x08\"\xbf\x07\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12>\n\x03row\x18\x04 \x03(\x0b\x32\x31.dstore.engine.om_GetVoucherTypes_Ad.Response.Row\x1a\x8f\x06\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x37\n\x12v_code_origin_type\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12;\n\x13\x64\x65\x66\x61ult_valid_until\x18\x92N \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x37\n\x12generation_pattern\x18\x93N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x36\n\x10valid_for_x_days\x18\x94N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x35\n\x0fvoucher_type_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12?\n\x19x_times_usable_per_person\x18\x96N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12=\n\x18voucher_type_description\x18\x97N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x34\n\x0ex_times_usable\x18\x98N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12;\n\x15v_code_origin_type_id\x18\x99N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x31\n\x0b\x63ode_status\x18\x9aN \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12=\n\x18\x62\x65nefit_type_description\x18\x9bN \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x35\n\x0f\x62\x65nefit_type_id\x18\x9cN \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12=\n\x14last_code_created_at\x18\xaa\x9c\x01 \x01(\x0b\x32\x1d.dstore.values.TimestampValueBV\n\x1bio.dstore.engine.proceduresZ7gosdk.dstore.de/engine/procedures/om_GetVoucherTypes_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -119,8 +118,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=650,
+  serialized_start=143,
+  serialized_end=612,
 )
 
 
@@ -241,8 +240,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=853,
-  serialized_end=1636,
+  serialized_start=791,
+  serialized_end=1574,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -285,8 +284,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=653,
-  serialized_end=1636,
+  serialized_start=615,
+  serialized_end=1574,
 )
 
 _PARAMETERS.fields_by_name['voucher_type_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -308,8 +307,8 @@ _RESPONSE_ROW.fields_by_name['benefit_type_description'].message_type = dstore_d
 _RESPONSE_ROW.fields_by_name['benefit_type_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['last_code_created_at'].message_type = dstore_dot_values__pb2._TIMESTAMPVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

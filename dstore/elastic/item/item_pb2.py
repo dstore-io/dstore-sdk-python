@@ -14,66 +14,174 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore.elastic import elastic_pb2 as dstore_dot_elastic_dot_elastic__pb2
-from dstore.elastic.item import node_pb2 as dstore_dot_elastic_dot_item_dot_node__pb2
 from dstore import values_pb2 as dstore_dot_values__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/elastic/item/item.proto',
-  package='dstore.elastic.item',
+  package='dstore.elastic.item.item',
   syntax='proto3',
-  serialized_pb=_b('\n\x1e\x64store/elastic/item/item.proto\x12\x13\x64store.elastic.item\x1a\x1c\x64store/elastic/elastic.proto\x1a\x1e\x64store/elastic/item/node.proto\x1a\x13\x64store/values.proto\"\xcd\x01\n\x04Item\x12\'\n\x04node\x18\x01 \x01(\x0b\x32\x19.dstore.elastic.node.Node\x12/\n\x0cvariant_node\x18\x02 \x03(\x0b\x32\x19.dstore.elastic.node.Node\x12\x33\n\x0clast_updated\x18\x03 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\r\n\x05score\x18\n \x01(\x01\x12\x12\n\nindex_name\x18\x0b \x01(\t\x12\x13\n\x0b\x64ocument_id\x18\x0c \x01(\t\"\x9e\x02\n\x05\x46\x61\x63\x65t\x12\x12\n\nfield_name\x18\x01 \x01(\t\x12:\n\x0b\x66\x61\x63\x65t_value\x18\x02 \x03(\x0b\x32%.dstore.elastic.item.Facet.FacetValue\x12\x12\n\nrange_from\x18\n \x01(\x01\x12\x10\n\x08range_to\x18\x0b \x01(\x01\x1a\x9e\x01\n\nFacetValue\x12#\n\x05value\x18\x01 \x01(\x0b\x32\x14.dstore.values.Value\x12\x18\n\x10total_item_count\x18\x02 \x01(\x05\x12\x1b\n\x13matching_item_count\x18\x03 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\x12\x11\n\tmin_value\x18\x05 \x01(\x01\x12\x11\n\tmax_value\x18\x06 \x01(\x01\x42P\n\x16io.dstore.elastic.itemB\x0b\x45lasticItemZ)gosdk.dstore.de/elastic/item/elastic_itemb\x06proto3')
+  serialized_pb=_b('\n\x1e\x64store/elastic/item/item.proto\x12\x18\x64store.elastic.item.item\x1a\x1c\x64store/elastic/elastic.proto\x1a\x13\x64store/values.proto\"\xf1\x03\n\x04Item\x12\x31\n\x04node\x18\x01 \x01(\x0b\x32#.dstore.elastic.item.item.Item.Node\x12\x39\n\x0cvariant_node\x18\x02 \x03(\x0b\x32#.dstore.elastic.item.item.Item.Node\x12\x33\n\x0clast_updated\x18\x03 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\r\n\x05score\x18\n \x01(\x01\x12\x12\n\nindex_name\x18\x0b \x01(\t\x12\x13\n\x0b\x64ocument_id\x18\x0c \x01(\t\x1a\x8d\x02\n\x04Node\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x14\n\x0ctree_node_id\x18\x02 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\x08\x12\x10\n\x08level_id\x18\x04 \x01(\x05\x12\x0f\n\x07sort_no\x18\x05 \x01(\x05\x12 \n\x18predecessor_tree_node_id\x18\x06 \x03(\x05\x12?\n\x06\x66ields\x18\x14 \x03(\x0b\x32/.dstore.elastic.item.item.Item.Node.FieldsEntry\x1a\x44\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12$\n\x05value\x18\x02 \x01(\x0b\x32\x15.dstore.elastic.Field:\x02\x38\x01\x42\x45\n\x16io.dstore.elastic.itemP\x01Z)gosdk.dstore.de/elastic/item/elastic_itemb\x06proto3')
   ,
-  dependencies=[dstore_dot_elastic_dot_elastic__pb2.DESCRIPTOR,dstore_dot_elastic_dot_item_dot_node__pb2.DESCRIPTOR,dstore_dot_values__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_elastic_dot_elastic__pb2.DESCRIPTOR,dstore_dot_values__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
 
-_ITEM = _descriptor.Descriptor(
-  name='Item',
-  full_name='dstore.elastic.item.Item',
+_ITEM_NODE_FIELDSENTRY = _descriptor.Descriptor(
+  name='FieldsEntry',
+  full_name='dstore.elastic.item.item.Item.Node.FieldsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node', full_name='dstore.elastic.item.Item.node', index=0,
+      name='key', full_name='dstore.elastic.item.item.Item.Node.FieldsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='dstore.elastic.item.item.Item.Node.FieldsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=541,
+  serialized_end=609,
+)
+
+_ITEM_NODE = _descriptor.Descriptor(
+  name='Node',
+  full_name='dstore.elastic.item.item.Item.Node',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='description', full_name='dstore.elastic.item.item.Item.Node.description', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tree_node_id', full_name='dstore.elastic.item.item.Item.Node.tree_node_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='active', full_name='dstore.elastic.item.item.Item.Node.active', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='level_id', full_name='dstore.elastic.item.item.Item.Node.level_id', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sort_no', full_name='dstore.elastic.item.item.Item.Node.sort_no', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='predecessor_tree_node_id', full_name='dstore.elastic.item.item.Item.Node.predecessor_tree_node_id', index=5,
+      number=6, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fields', full_name='dstore.elastic.item.item.Item.Node.fields', index=6,
+      number=20, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_ITEM_NODE_FIELDSENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=340,
+  serialized_end=609,
+)
+
+_ITEM = _descriptor.Descriptor(
+  name='Item',
+  full_name='dstore.elastic.item.item.Item',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node', full_name='dstore.elastic.item.item.Item.node', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='variant_node', full_name='dstore.elastic.item.Item.variant_node', index=1,
+      name='variant_node', full_name='dstore.elastic.item.item.Item.variant_node', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='last_updated', full_name='dstore.elastic.item.Item.last_updated', index=2,
+      name='last_updated', full_name='dstore.elastic.item.item.Item.last_updated', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='dstore.elastic.item.Item.score', index=3,
+      name='score', full_name='dstore.elastic.item.item.Item.score', index=3,
       number=10, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='index_name', full_name='dstore.elastic.item.Item.index_name', index=4,
+      name='index_name', full_name='dstore.elastic.item.item.Item.index_name', index=4,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='document_id', full_name='dstore.elastic.item.Item.document_id', index=5,
+      name='document_id', full_name='dstore.elastic.item.item.Item.document_id', index=5,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -82,7 +190,7 @@ _ITEM = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_ITEM_NODE, ],
   enum_types=[
   ],
   options=None,
@@ -91,161 +199,47 @@ _ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=139,
-  serialized_end=344,
+  serialized_start=112,
+  serialized_end=609,
 )
 
-
-_FACET_FACETVALUE = _descriptor.Descriptor(
-  name='FacetValue',
-  full_name='dstore.elastic.item.Facet.FacetValue',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.elastic.item.Facet.FacetValue.value', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='total_item_count', full_name='dstore.elastic.item.Facet.FacetValue.total_item_count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='matching_item_count', full_name='dstore.elastic.item.Facet.FacetValue.matching_item_count', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='active', full_name='dstore.elastic.item.Facet.FacetValue.active', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='min_value', full_name='dstore.elastic.item.Facet.FacetValue.min_value', index=4,
-      number=5, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_value', full_name='dstore.elastic.item.Facet.FacetValue.max_value', index=5,
-      number=6, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=475,
-  serialized_end=633,
-)
-
-_FACET = _descriptor.Descriptor(
-  name='Facet',
-  full_name='dstore.elastic.item.Facet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='field_name', full_name='dstore.elastic.item.Facet.field_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='facet_value', full_name='dstore.elastic.item.Facet.facet_value', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='range_from', full_name='dstore.elastic.item.Facet.range_from', index=2,
-      number=10, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='range_to', full_name='dstore.elastic.item.Facet.range_to', index=3,
-      number=11, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_FACET_FACETVALUE, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=347,
-  serialized_end=633,
-)
-
-_ITEM.fields_by_name['node'].message_type = dstore_dot_elastic_dot_item_dot_node__pb2._NODE
-_ITEM.fields_by_name['variant_node'].message_type = dstore_dot_elastic_dot_item_dot_node__pb2._NODE
+_ITEM_NODE_FIELDSENTRY.fields_by_name['value'].message_type = dstore_dot_elastic_dot_elastic__pb2._FIELD
+_ITEM_NODE_FIELDSENTRY.containing_type = _ITEM_NODE
+_ITEM_NODE.fields_by_name['fields'].message_type = _ITEM_NODE_FIELDSENTRY
+_ITEM_NODE.containing_type = _ITEM
+_ITEM.fields_by_name['node'].message_type = _ITEM_NODE
+_ITEM.fields_by_name['variant_node'].message_type = _ITEM_NODE
 _ITEM.fields_by_name['last_updated'].message_type = dstore_dot_values__pb2._TIMESTAMPVALUE
-_FACET_FACETVALUE.fields_by_name['value'].message_type = dstore_dot_values__pb2._VALUE
-_FACET_FACETVALUE.containing_type = _FACET
-_FACET.fields_by_name['facet_value'].message_type = _FACET_FACETVALUE
 DESCRIPTOR.message_types_by_name['Item'] = _ITEM
-DESCRIPTOR.message_types_by_name['Facet'] = _FACET
 
 Item = _reflection.GeneratedProtocolMessageType('Item', (_message.Message,), dict(
-  DESCRIPTOR = _ITEM,
-  __module__ = 'dstore.elastic.item.item_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.elastic.item.Item)
-  ))
-_sym_db.RegisterMessage(Item)
 
-Facet = _reflection.GeneratedProtocolMessageType('Facet', (_message.Message,), dict(
+  Node = _reflection.GeneratedProtocolMessageType('Node', (_message.Message,), dict(
 
-  FacetValue = _reflection.GeneratedProtocolMessageType('FacetValue', (_message.Message,), dict(
-    DESCRIPTOR = _FACET_FACETVALUE,
+    FieldsEntry = _reflection.GeneratedProtocolMessageType('FieldsEntry', (_message.Message,), dict(
+      DESCRIPTOR = _ITEM_NODE_FIELDSENTRY,
+      __module__ = 'dstore.elastic.item.item_pb2'
+      # @@protoc_insertion_point(class_scope:dstore.elastic.item.item.Item.Node.FieldsEntry)
+      ))
+    ,
+    DESCRIPTOR = _ITEM_NODE,
     __module__ = 'dstore.elastic.item.item_pb2'
-    # @@protoc_insertion_point(class_scope:dstore.elastic.item.Facet.FacetValue)
+    # @@protoc_insertion_point(class_scope:dstore.elastic.item.item.Item.Node)
     ))
   ,
-  DESCRIPTOR = _FACET,
+  DESCRIPTOR = _ITEM,
   __module__ = 'dstore.elastic.item.item_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.elastic.item.Facet)
+  # @@protoc_insertion_point(class_scope:dstore.elastic.item.item.Item)
   ))
-_sym_db.RegisterMessage(Facet)
-_sym_db.RegisterMessage(Facet.FacetValue)
+_sym_db.RegisterMessage(Item)
+_sym_db.RegisterMessage(Item.Node)
+_sym_db.RegisterMessage(Item.Node.FieldsEntry)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026io.dstore.elastic.itemB\013ElasticItemZ)gosdk.dstore.de/elastic/item/elastic_item'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026io.dstore.elastic.itemP\001Z)gosdk.dstore.de/elastic/item/elastic_item'))
+_ITEM_NODE_FIELDSENTRY.has_options = True
+_ITEM_NODE_FIELDSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 import grpc
 from grpc.beta import implementations as beta_implementations
 from grpc.beta import interfaces as beta_interfaces

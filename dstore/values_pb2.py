@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/values.proto',
   package='dstore.values',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x64store/values.proto\x12\rdstore.values\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1d\n\x0cintegerValue\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1c\n\x0bstringValue\x12\r\n\x05value\x18\x01 \x01(\t\"\x1b\n\nbytesValue\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x1c\n\x0b\x64oubleValue\x12\r\n\x05value\x18\x01 \x01(\x01\"\x1d\n\x0c\x62ooleanValue\x12\r\n\x05value\x18\x01 \x01(\x08\"\x1d\n\x0c\x64\x65\x63imalValue\x12\r\n\x05value\x18\x01 \x01(\t\";\n\x0etimestampValue\x12)\n\x05value\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x1a\n\tlongValue\x12\r\n\x05value\x18\x01 \x01(\x03\"\xb5\x03\n\x05Value\x12\x34\n\rinteger_value\x18\n \x01(\x0b\x32\x1b.dstore.values.integerValueH\x00\x12\x32\n\x0cstring_value\x18\x0b \x01(\x0b\x32\x1a.dstore.values.stringValueH\x00\x12/\n\nbyte_value\x18\x0c \x01(\x0b\x32\x19.dstore.values.bytesValueH\x00\x12\x32\n\x0c\x64ouble_value\x18\r \x01(\x0b\x32\x1a.dstore.values.doubleValueH\x00\x12\x34\n\rboolean_value\x18\x0e \x01(\x0b\x32\x1b.dstore.values.booleanValueH\x00\x12\x34\n\rdecimal_value\x18\x0f \x01(\x0b\x32\x1b.dstore.values.decimalValueH\x00\x12\x38\n\x0ftimestamp_value\x18\x10 \x01(\x0b\x32\x1d.dstore.values.timestampValueH\x00\x12.\n\nlong_value\x18\x11 \x01(\x0b\x32\x18.dstore.values.longValueH\x00\x42\x07\n\x05valueB#\n\tio.dstoreZ\x16gosdk.dstore.de/valuesb\x06proto3')
+  serialized_pb=_b('\n\x13\x64store/values.proto\x12\rdstore.values\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1d\n\x0cIntegerValue\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1c\n\x0bStringValue\x12\r\n\x05value\x18\x01 \x01(\t\"\x1b\n\nBytesValue\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x1c\n\x0b\x44oubleValue\x12\r\n\x05value\x18\x01 \x01(\x01\"\x1d\n\x0c\x42ooleanValue\x12\r\n\x05value\x18\x01 \x01(\x08\"\x1d\n\x0c\x44\x65\x63imalValue\x12\r\n\x05value\x18\x01 \x01(\t\";\n\x0eTimestampValue\x12)\n\x05value\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x1a\n\tLongValue\x12\r\n\x05value\x18\x01 \x01(\x03\"\xb5\x03\n\x05Value\x12\x34\n\rinteger_value\x18\n \x01(\x0b\x32\x1b.dstore.values.IntegerValueH\x00\x12\x32\n\x0cstring_value\x18\x0b \x01(\x0b\x32\x1a.dstore.values.StringValueH\x00\x12/\n\nbyte_value\x18\x0c \x01(\x0b\x32\x19.dstore.values.BytesValueH\x00\x12\x32\n\x0c\x64ouble_value\x18\r \x01(\x0b\x32\x1a.dstore.values.DoubleValueH\x00\x12\x34\n\rboolean_value\x18\x0e \x01(\x0b\x32\x1b.dstore.values.BooleanValueH\x00\x12\x34\n\rdecimal_value\x18\x0f \x01(\x0b\x32\x1b.dstore.values.DecimalValueH\x00\x12\x38\n\x0ftimestamp_value\x18\x10 \x01(\x0b\x32\x1d.dstore.values.TimestampValueH\x00\x12.\n\nlong_value\x18\x11 \x01(\x0b\x32\x18.dstore.values.LongValueH\x00\x42\x07\n\x05valueB>\n\x10io.dstore.valuesB\x10ValuesOuterClassP\x01Z\x16gosdk.dstore.de/valuesb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -29,14 +29,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 _INTEGERVALUE = _descriptor.Descriptor(
-  name='integerValue',
-  full_name='dstore.values.integerValue',
+  name='IntegerValue',
+  full_name='dstore.values.IntegerValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.integerValue.value', index=0,
+      name='value', full_name='dstore.values.IntegerValue.value', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -60,14 +60,14 @@ _INTEGERVALUE = _descriptor.Descriptor(
 
 
 _STRINGVALUE = _descriptor.Descriptor(
-  name='stringValue',
-  full_name='dstore.values.stringValue',
+  name='StringValue',
+  full_name='dstore.values.StringValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.stringValue.value', index=0,
+      name='value', full_name='dstore.values.StringValue.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -91,14 +91,14 @@ _STRINGVALUE = _descriptor.Descriptor(
 
 
 _BYTESVALUE = _descriptor.Descriptor(
-  name='bytesValue',
-  full_name='dstore.values.bytesValue',
+  name='BytesValue',
+  full_name='dstore.values.BytesValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.bytesValue.value', index=0,
+      name='value', full_name='dstore.values.BytesValue.value', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -122,14 +122,14 @@ _BYTESVALUE = _descriptor.Descriptor(
 
 
 _DOUBLEVALUE = _descriptor.Descriptor(
-  name='doubleValue',
-  full_name='dstore.values.doubleValue',
+  name='DoubleValue',
+  full_name='dstore.values.DoubleValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.doubleValue.value', index=0,
+      name='value', full_name='dstore.values.DoubleValue.value', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -153,14 +153,14 @@ _DOUBLEVALUE = _descriptor.Descriptor(
 
 
 _BOOLEANVALUE = _descriptor.Descriptor(
-  name='booleanValue',
-  full_name='dstore.values.booleanValue',
+  name='BooleanValue',
+  full_name='dstore.values.BooleanValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.booleanValue.value', index=0,
+      name='value', full_name='dstore.values.BooleanValue.value', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -184,14 +184,14 @@ _BOOLEANVALUE = _descriptor.Descriptor(
 
 
 _DECIMALVALUE = _descriptor.Descriptor(
-  name='decimalValue',
-  full_name='dstore.values.decimalValue',
+  name='DecimalValue',
+  full_name='dstore.values.DecimalValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.decimalValue.value', index=0,
+      name='value', full_name='dstore.values.DecimalValue.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -215,14 +215,14 @@ _DECIMALVALUE = _descriptor.Descriptor(
 
 
 _TIMESTAMPVALUE = _descriptor.Descriptor(
-  name='timestampValue',
-  full_name='dstore.values.timestampValue',
+  name='TimestampValue',
+  full_name='dstore.values.TimestampValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.timestampValue.value', index=0,
+      name='value', full_name='dstore.values.TimestampValue.value', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -246,14 +246,14 @@ _TIMESTAMPVALUE = _descriptor.Descriptor(
 
 
 _LONGVALUE = _descriptor.Descriptor(
-  name='longValue',
-  full_name='dstore.values.longValue',
+  name='LongValue',
+  full_name='dstore.values.LongValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='dstore.values.longValue.value', index=0,
+      name='value', full_name='dstore.values.LongValue.value', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -391,71 +391,71 @@ _VALUE.fields_by_name['timestamp_value'].containing_oneof = _VALUE.oneofs_by_nam
 _VALUE.oneofs_by_name['value'].fields.append(
   _VALUE.fields_by_name['long_value'])
 _VALUE.fields_by_name['long_value'].containing_oneof = _VALUE.oneofs_by_name['value']
-DESCRIPTOR.message_types_by_name['integerValue'] = _INTEGERVALUE
-DESCRIPTOR.message_types_by_name['stringValue'] = _STRINGVALUE
-DESCRIPTOR.message_types_by_name['bytesValue'] = _BYTESVALUE
-DESCRIPTOR.message_types_by_name['doubleValue'] = _DOUBLEVALUE
-DESCRIPTOR.message_types_by_name['booleanValue'] = _BOOLEANVALUE
-DESCRIPTOR.message_types_by_name['decimalValue'] = _DECIMALVALUE
-DESCRIPTOR.message_types_by_name['timestampValue'] = _TIMESTAMPVALUE
-DESCRIPTOR.message_types_by_name['longValue'] = _LONGVALUE
+DESCRIPTOR.message_types_by_name['IntegerValue'] = _INTEGERVALUE
+DESCRIPTOR.message_types_by_name['StringValue'] = _STRINGVALUE
+DESCRIPTOR.message_types_by_name['BytesValue'] = _BYTESVALUE
+DESCRIPTOR.message_types_by_name['DoubleValue'] = _DOUBLEVALUE
+DESCRIPTOR.message_types_by_name['BooleanValue'] = _BOOLEANVALUE
+DESCRIPTOR.message_types_by_name['DecimalValue'] = _DECIMALVALUE
+DESCRIPTOR.message_types_by_name['TimestampValue'] = _TIMESTAMPVALUE
+DESCRIPTOR.message_types_by_name['LongValue'] = _LONGVALUE
 DESCRIPTOR.message_types_by_name['Value'] = _VALUE
 
-integerValue = _reflection.GeneratedProtocolMessageType('integerValue', (_message.Message,), dict(
+IntegerValue = _reflection.GeneratedProtocolMessageType('IntegerValue', (_message.Message,), dict(
   DESCRIPTOR = _INTEGERVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.integerValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.IntegerValue)
   ))
-_sym_db.RegisterMessage(integerValue)
+_sym_db.RegisterMessage(IntegerValue)
 
-stringValue = _reflection.GeneratedProtocolMessageType('stringValue', (_message.Message,), dict(
+StringValue = _reflection.GeneratedProtocolMessageType('StringValue', (_message.Message,), dict(
   DESCRIPTOR = _STRINGVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.stringValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.StringValue)
   ))
-_sym_db.RegisterMessage(stringValue)
+_sym_db.RegisterMessage(StringValue)
 
-bytesValue = _reflection.GeneratedProtocolMessageType('bytesValue', (_message.Message,), dict(
+BytesValue = _reflection.GeneratedProtocolMessageType('BytesValue', (_message.Message,), dict(
   DESCRIPTOR = _BYTESVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.bytesValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.BytesValue)
   ))
-_sym_db.RegisterMessage(bytesValue)
+_sym_db.RegisterMessage(BytesValue)
 
-doubleValue = _reflection.GeneratedProtocolMessageType('doubleValue', (_message.Message,), dict(
+DoubleValue = _reflection.GeneratedProtocolMessageType('DoubleValue', (_message.Message,), dict(
   DESCRIPTOR = _DOUBLEVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.doubleValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.DoubleValue)
   ))
-_sym_db.RegisterMessage(doubleValue)
+_sym_db.RegisterMessage(DoubleValue)
 
-booleanValue = _reflection.GeneratedProtocolMessageType('booleanValue', (_message.Message,), dict(
+BooleanValue = _reflection.GeneratedProtocolMessageType('BooleanValue', (_message.Message,), dict(
   DESCRIPTOR = _BOOLEANVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.booleanValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.BooleanValue)
   ))
-_sym_db.RegisterMessage(booleanValue)
+_sym_db.RegisterMessage(BooleanValue)
 
-decimalValue = _reflection.GeneratedProtocolMessageType('decimalValue', (_message.Message,), dict(
+DecimalValue = _reflection.GeneratedProtocolMessageType('DecimalValue', (_message.Message,), dict(
   DESCRIPTOR = _DECIMALVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.decimalValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.DecimalValue)
   ))
-_sym_db.RegisterMessage(decimalValue)
+_sym_db.RegisterMessage(DecimalValue)
 
-timestampValue = _reflection.GeneratedProtocolMessageType('timestampValue', (_message.Message,), dict(
+TimestampValue = _reflection.GeneratedProtocolMessageType('TimestampValue', (_message.Message,), dict(
   DESCRIPTOR = _TIMESTAMPVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.timestampValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.TimestampValue)
   ))
-_sym_db.RegisterMessage(timestampValue)
+_sym_db.RegisterMessage(TimestampValue)
 
-longValue = _reflection.GeneratedProtocolMessageType('longValue', (_message.Message,), dict(
+LongValue = _reflection.GeneratedProtocolMessageType('LongValue', (_message.Message,), dict(
   DESCRIPTOR = _LONGVALUE,
   __module__ = 'dstore.values_pb2'
-  # @@protoc_insertion_point(class_scope:dstore.values.longValue)
+  # @@protoc_insertion_point(class_scope:dstore.values.LongValue)
   ))
-_sym_db.RegisterMessage(longValue)
+_sym_db.RegisterMessage(LongValue)
 
 Value = _reflection.GeneratedProtocolMessageType('Value', (_message.Message,), dict(
   DESCRIPTOR = _VALUE,
@@ -466,7 +466,7 @@ _sym_db.RegisterMessage(Value)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\tio.dstoreZ\026gosdk.dstore.de/values'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\020io.dstore.valuesB\020ValuesOuterClassP\001Z\026gosdk.dstore.de/values'))
 import grpc
 from grpc.beta import implementations as beta_implementations
 from grpc.beta import interfaces as beta_interfaces

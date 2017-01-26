@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_CreateNewBill_Ad.proto',
   package='dstore.engine.om_CreateNewBill_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n2dstore/engine/procedures/om_CreateNewBill_Ad.proto\x12!dstore.engine.om_CreateNewBill_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xa6\t\n\nParameters\x12\x41\n\x1cincorrect_information_exists\x18\x01 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12*\n!incorrect_information_exists_null\x18\xe9\x07 \x01(\x08\x12+\n\x06result\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x14\n\x0bresult_null\x18\xea\x07 \x01(\x08\x12-\n\x08order_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rorder_id_null\x18\xeb\x07 \x01(\x08\x12\x38\n\x13recipient_person_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12!\n\x18recipient_person_id_null\x18\xec\x07 \x01(\x08\x12\x35\n\x10\x64rawer_person_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1e\n\x15\x64rawer_person_id_null\x18\xed\x07 \x01(\x08\x12\x30\n\x0b\x63urrency_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10\x63urrency_id_null\x18\xee\x07 \x01(\x08\x12\x36\n\x11generated_bill_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1f\n\x16generated_bill_id_null\x18\xef\x07 \x01(\x08\x12\x39\n\x14\x61\x64\x64_bill_information\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\"\n\x19\x61\x64\x64_bill_information_null\x18\xf0\x07 \x01(\x08\x12\x41\n\x1c\x61\x64\x64_bill_content_information\x18\t \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12*\n!add_bill_content_information_null\x18\xf1\x07 \x01(\x08\x12\x37\n\x12other_bill_content\x18\n \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12 \n\x17other_bill_content_null\x18\xf2\x07 \x01(\x08\x12\x42\n\x1d\x61\x64\x64_other_content_information\x18\x0b \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12+\n\"add_other_content_information_null\x18\xf3\x07 \x01(\x08\x12>\n\x19get_incorrect_information\x18\x0c \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\'\n\x1eget_incorrect_information_null\x18\xf4\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\r \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x15\n\x0c\x63ountry_null\x18\xf5\x07 \x01(\x08\"\xe5\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12<\n\x03row\x18\x04 \x03(\x0b\x32/.dstore.engine.om_CreateNewBill_Ad.Response.Row\x12\x36\n\x11generated_bill_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\xe7\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12.\n\x08table_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x39\n\x13information_type_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x32\n\x0ctable_key_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x30\n\nerror_code\x18\x94N \x01(\x0b\x32\x1b.dstore.values.integerValueBT\n\x1bio.dstore.engine.proceduresZ5gosdk.dstore.de/engine/procedures/om_CreateNewBill_Adb\x06proto3')
+  serialized_pb=_b('\n2dstore/engine/procedures/om_CreateNewBill_Ad.proto\x12!dstore.engine.om_CreateNewBill_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xa6\t\n\nParameters\x12\x41\n\x1cincorrect_information_exists\x18\x01 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12*\n!incorrect_information_exists_null\x18\xe9\x07 \x01(\x08\x12+\n\x06result\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x14\n\x0bresult_null\x18\xea\x07 \x01(\x08\x12-\n\x08order_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rorder_id_null\x18\xeb\x07 \x01(\x08\x12\x38\n\x13recipient_person_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12!\n\x18recipient_person_id_null\x18\xec\x07 \x01(\x08\x12\x35\n\x10\x64rawer_person_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1e\n\x15\x64rawer_person_id_null\x18\xed\x07 \x01(\x08\x12\x30\n\x0b\x63urrency_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10\x63urrency_id_null\x18\xee\x07 \x01(\x08\x12\x36\n\x11generated_bill_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1f\n\x16generated_bill_id_null\x18\xef\x07 \x01(\x08\x12\x39\n\x14\x61\x64\x64_bill_information\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\"\n\x19\x61\x64\x64_bill_information_null\x18\xf0\x07 \x01(\x08\x12\x41\n\x1c\x61\x64\x64_bill_content_information\x18\t \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12*\n!add_bill_content_information_null\x18\xf1\x07 \x01(\x08\x12\x37\n\x12other_bill_content\x18\n \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12 \n\x17other_bill_content_null\x18\xf2\x07 \x01(\x08\x12\x42\n\x1d\x61\x64\x64_other_content_information\x18\x0b \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12+\n\"add_other_content_information_null\x18\xf3\x07 \x01(\x08\x12>\n\x19get_incorrect_information\x18\x0c \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\'\n\x1eget_incorrect_information_null\x18\xf4\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\r \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x15\n\x0c\x63ountry_null\x18\xf5\x07 \x01(\x08\"\xcd\x03\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12<\n\x03row\x18\x04 \x03(\x0b\x32/.dstore.engine.om_CreateNewBill_Ad.Response.Row\x12\x36\n\x11generated_bill_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\xe7\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12.\n\x08table_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x39\n\x13information_type_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x32\n\x0ctable_key_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x30\n\nerror_code\x18\x94N \x01(\x0b\x32\x1b.dstore.values.IntegerValueBT\n\x1bio.dstore.engine.proceduresZ5gosdk.dstore.de/engine/procedures/om_CreateNewBill_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -231,8 +230,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=177,
-  serialized_end=1367,
+  serialized_start=139,
+  serialized_end=1329,
 )
 
 
@@ -290,8 +289,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1624,
-  serialized_end=1855,
+  serialized_start=1562,
+  serialized_end=1793,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -341,8 +340,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1370,
-  serialized_end=1855,
+  serialized_start=1332,
+  serialized_end=1793,
 )
 
 _PARAMETERS.fields_by_name['incorrect_information_exists'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
@@ -363,8 +362,8 @@ _RESPONSE_ROW.fields_by_name['information_type_id'].message_type = dstore_dot_va
 _RESPONSE_ROW.fields_by_name['table_key_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['error_code'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['generated_bill_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

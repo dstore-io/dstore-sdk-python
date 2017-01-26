@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_GetCampaignSettingEntry.proto',
   package='dstore.engine.om_GetCampaignSettingEntry',
   syntax='proto3',
-  serialized_pb=_b('\n9dstore/engine/procedures/om_GetCampaignSettingEntry.proto\x12(dstore.engine.om_GetCampaignSettingEntry\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xc5\x03\n\nParameters\x12\x30\n\x0b\x63\x61mpaign_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10\x63\x61mpaign_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0ckey_variable\x18\x02 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x1a\n\x11key_variable_null\x18\xea\x07 \x01(\x08\x12\x31\n\rsetting_value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x1b\n\x12setting_value_null\x18\xeb\x07 \x01(\x08\x12\x32\n\rselect_result\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1b\n\x12select_result_null\x18\xec\x07 \x01(\x08\x12H\n#print_error_msg_if_entry_is_missing\x18\x05 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x31\n(print_error_msg_if_entry_is_missing_null\x18\xed\x07 \x01(\x08\"\xc9\x02\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x43\n\x03row\x18\x04 \x03(\x0b\x32\x36.dstore.engine.om_GetCampaignSettingEntry.Response.Row\x12\x31\n\rsetting_value\x18\x65 \x01(\x0b\x32\x1a.dstore.values.stringValue\x1aJ\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x32\n\rsetting_value\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValueB[\n\x1bio.dstore.engine.proceduresZ<gosdk.dstore.de/engine/procedures/om_GetCampaignSettingEntryb\x06proto3')
+  serialized_pb=_b('\n9dstore/engine/procedures/om_GetCampaignSettingEntry.proto\x12(dstore.engine.om_GetCampaignSettingEntry\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xc5\x03\n\nParameters\x12\x30\n\x0b\x63\x61mpaign_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10\x63\x61mpaign_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0ckey_variable\x18\x02 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x1a\n\x11key_variable_null\x18\xea\x07 \x01(\x08\x12\x31\n\rsetting_value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x1b\n\x12setting_value_null\x18\xeb\x07 \x01(\x08\x12\x32\n\rselect_result\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1b\n\x12select_result_null\x18\xec\x07 \x01(\x08\x12H\n#print_error_msg_if_entry_is_missing\x18\x05 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x31\n(print_error_msg_if_entry_is_missing_null\x18\xed\x07 \x01(\x08\"\xb1\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x43\n\x03row\x18\x04 \x03(\x0b\x32\x36.dstore.engine.om_GetCampaignSettingEntry.Response.Row\x12\x31\n\rsetting_value\x18\x65 \x01(\x0b\x32\x1a.dstore.values.StringValue\x1aJ\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x32\n\rsetting_value\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValueB[\n\x1bio.dstore.engine.proceduresZ<gosdk.dstore.de/engine/procedures/om_GetCampaignSettingEntryb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -119,8 +118,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=191,
-  serialized_end=644,
+  serialized_start=153,
+  serialized_end=606,
 )
 
 
@@ -157,8 +156,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=902,
-  serialized_end=976,
+  serialized_start=840,
+  serialized_end=914,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -208,8 +207,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=647,
-  serialized_end=976,
+  serialized_start=609,
+  serialized_end=914,
 )
 
 _PARAMETERS.fields_by_name['campaign_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -219,8 +218,8 @@ _PARAMETERS.fields_by_name['select_result'].message_type = dstore_dot_values__pb
 _PARAMETERS.fields_by_name['print_error_msg_if_entry_is_missing'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.fields_by_name['setting_value'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['setting_value'].message_type = dstore_dot_values__pb2._STRINGVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/mi_GetRessourceUsage.proto',
   package='dstore.engine.mi_GetRessourceUsage',
   syntax='proto3',
-  serialized_pb=_b('\n3dstore/engine/procedures/mi_GetRessourceUsage.proto\x12\"dstore.engine.mi_GetRessourceUsage\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xe5\x01\n\nParameters\x12(\n\x03\x63pu\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x11\n\x08\x63pu_null\x18\xe9\x07 \x01(\x08\x12/\n\nphysicalio\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x18\n\x0fphysicalio_null\x18\xea\x07 \x01(\x08\x12\x32\n\rselect_result\x18\x03 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1b\n\x12select_result_null\x18\xeb\x07 \x01(\x08\"\x98\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12=\n\x03row\x18\x04 \x03(\x0b\x32\x30.dstore.engine.mi_GetRessourceUsage.Response.Row\x12(\n\x03\x63pu\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12/\n\nphysicalio\x18\x66 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1aw\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12+\n\x05\x63_p_u\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x32\n\x0cphysical_i_o\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValueBU\n\x1bio.dstore.engine.proceduresZ6gosdk.dstore.de/engine/procedures/mi_GetRessourceUsageb\x06proto3')
+  serialized_pb=_b('\n3dstore/engine/procedures/mi_GetRessourceUsage.proto\x12\"dstore.engine.mi_GetRessourceUsage\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xe5\x01\n\nParameters\x12(\n\x03\x63pu\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x11\n\x08\x63pu_null\x18\xe9\x07 \x01(\x08\x12/\n\nphysicalio\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x18\n\x0fphysicalio_null\x18\xea\x07 \x01(\x08\x12\x32\n\rselect_result\x18\x03 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1b\n\x12select_result_null\x18\xeb\x07 \x01(\x08\"\x80\x03\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12=\n\x03row\x18\x04 \x03(\x0b\x32\x30.dstore.engine.mi_GetRessourceUsage.Response.Row\x12(\n\x03\x63pu\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12/\n\nphysicalio\x18\x66 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1aw\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12+\n\x05\x63_p_u\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x32\n\x0cphysical_i_o\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValueBU\n\x1bio.dstore.engine.proceduresZ6gosdk.dstore.de/engine/procedures/mi_GetRessourceUsageb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -91,8 +90,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=179,
-  serialized_end=408,
+  serialized_start=141,
+  serialized_end=370,
 )
 
 
@@ -136,8 +135,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=700,
-  serialized_end=819,
+  serialized_start=638,
+  serialized_end=757,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -194,8 +193,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=411,
-  serialized_end=819,
+  serialized_start=373,
+  serialized_end=757,
 )
 
 _PARAMETERS.fields_by_name['cpu'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -204,8 +203,8 @@ _PARAMETERS.fields_by_name['select_result'].message_type = dstore_dot_values__pb
 _RESPONSE_ROW.fields_by_name['c_p_u'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['physical_i_o'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['cpu'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE.fields_by_name['physicalio'].message_type = dstore_dot_values__pb2._INTEGERVALUE

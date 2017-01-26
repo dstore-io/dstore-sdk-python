@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_GetTrolleyAsMatrix_Pu.proto',
   package='dstore.engine.om_GetTrolleyAsMatrix_Pu',
   syntax='proto3',
-  serialized_pb=_b('\n7dstore/engine/procedures/om_GetTrolleyAsMatrix_Pu.proto\x12&dstore.engine.om_GetTrolleyAsMatrix_Pu\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xb3\x07\n\nParameters\x12-\n\tunique_id\x18\x01 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x17\n\x0eunique_id_null\x18\xe9\x07 \x01(\x08\x12.\n\tperson_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x17\n\x0eperson_id_null\x18\xea\x07 \x01(\x08\x12\x35\n\x10\x63\x61lculate_prices\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1e\n\x15\x63\x61lculate_prices_null\x18\xeb\x07 \x01(\x08\x12\x37\n\x12\x63heck_availability\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12 \n\x17\x63heck_availability_null\x18\xec\x07 \x01(\x08\x12\x41\n\x1cprice_node_characteristic_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12*\n!price_node_characteristic_id_null\x18\xed\x07 \x01(\x08\x12\x45\n repair_entries_with_same_node_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12.\n%repair_entries_with_same_node_id_null\x18\xee\x07 \x01(\x08\x12\x37\n\x12\x64\x65livery_person_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12 \n\x17\x64\x65livery_person_id_null\x18\xef\x07 \x01(\x08\x12\x45\n output_into_trolley_surch_interf\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12.\n%output_into_trolley_surch_interf_null\x18\xf0\x07 \x01(\x08\x12\x34\n\x0fpayment_type_id\x18\t \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1d\n\x14payment_type_id_null\x18\xf1\x07 \x01(\x08\x12\x35\n\x10shipping_type_id\x18\n \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1e\n\x15shipping_type_id_null\x18\xf2\x07 \x01(\x08\"\xad\n\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x41\n\x03row\x18\x04 \x03(\x0b\x32\x34.dstore.engine.om_GetTrolleyAsMatrix_Pu.Response.Row\x1a\xe2\x08\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12:\n\x14variant_tree_node_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12:\n\x14product_tree_node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x42\n\x1cprice_node_characteristic_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x44\n\x1fsurcharge_generated_by_camp_ids\x18\x94N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x35\n\x10y_axis_value_ids\x18\x95N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12;\n\x13input_date_and_time\x18\x96N \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x36\n\x10unit_netto_price\x18\x97N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x43\n\x1d\x61\x62solute_unit_netto_surcharge\x18\x98N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12.\n\x08quantity\x18\x99N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x30\n\x0bunit_symbol\x18\x9aN \x01(\x0b\x32\x1a.dstore.values.stringValue\x12-\n\x07removed\x18\x9bN \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x37\n\x11unit_brutto_price\x18\x9cN \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x32\n\ry_axis_values\x18\x9dN \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x35\n\x10surcharge_reason\x18\x9eN \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x31\n\x0cx_axis_value\x18\x9fN \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x44\n\x1e\x61\x62solute_unit_brutto_surcharge\x18\xa0N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x38\n\x13product_description\x18\xa1N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x35\n\x0fx_axis_value_id\x18\xa2N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x38\n\x12relative_surcharge\x18\xa3N \x01(\x0b\x32\x1b.dstore.values.decimalValueBY\n\x1bio.dstore.engine.proceduresZ:gosdk.dstore.de/engine/procedures/om_GetTrolleyAsMatrix_Pub\x06proto3')
+  serialized_pb=_b('\n7dstore/engine/procedures/om_GetTrolleyAsMatrix_Pu.proto\x12&dstore.engine.om_GetTrolleyAsMatrix_Pu\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xb3\x07\n\nParameters\x12-\n\tunique_id\x18\x01 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x17\n\x0eunique_id_null\x18\xe9\x07 \x01(\x08\x12.\n\tperson_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x17\n\x0eperson_id_null\x18\xea\x07 \x01(\x08\x12\x35\n\x10\x63\x61lculate_prices\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1e\n\x15\x63\x61lculate_prices_null\x18\xeb\x07 \x01(\x08\x12\x37\n\x12\x63heck_availability\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12 \n\x17\x63heck_availability_null\x18\xec\x07 \x01(\x08\x12\x41\n\x1cprice_node_characteristic_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12*\n!price_node_characteristic_id_null\x18\xed\x07 \x01(\x08\x12\x45\n repair_entries_with_same_node_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12.\n%repair_entries_with_same_node_id_null\x18\xee\x07 \x01(\x08\x12\x37\n\x12\x64\x65livery_person_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12 \n\x17\x64\x65livery_person_id_null\x18\xef\x07 \x01(\x08\x12\x45\n output_into_trolley_surch_interf\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12.\n%output_into_trolley_surch_interf_null\x18\xf0\x07 \x01(\x08\x12\x34\n\x0fpayment_type_id\x18\t \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1d\n\x14payment_type_id_null\x18\xf1\x07 \x01(\x08\x12\x35\n\x10shipping_type_id\x18\n \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1e\n\x15shipping_type_id_null\x18\xf2\x07 \x01(\x08\"\x95\n\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x41\n\x03row\x18\x04 \x03(\x0b\x32\x34.dstore.engine.om_GetTrolleyAsMatrix_Pu.Response.Row\x1a\xe2\x08\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12:\n\x14variant_tree_node_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12:\n\x14product_tree_node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x42\n\x1cprice_node_characteristic_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x44\n\x1fsurcharge_generated_by_camp_ids\x18\x94N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x35\n\x10y_axis_value_ids\x18\x95N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12;\n\x13input_date_and_time\x18\x96N \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x36\n\x10unit_netto_price\x18\x97N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x43\n\x1d\x61\x62solute_unit_netto_surcharge\x18\x98N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12.\n\x08quantity\x18\x99N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x30\n\x0bunit_symbol\x18\x9aN \x01(\x0b\x32\x1a.dstore.values.StringValue\x12-\n\x07removed\x18\x9bN \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x37\n\x11unit_brutto_price\x18\x9cN \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x32\n\ry_axis_values\x18\x9dN \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x35\n\x10surcharge_reason\x18\x9eN \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x31\n\x0cx_axis_value\x18\x9fN \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x44\n\x1e\x61\x62solute_unit_brutto_surcharge\x18\xa0N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x38\n\x13product_description\x18\xa1N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x35\n\x0fx_axis_value_id\x18\xa2N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x38\n\x12relative_surcharge\x18\xa3N \x01(\x0b\x32\x1b.dstore.values.DecimalValueBY\n\x1bio.dstore.engine.proceduresZ:gosdk.dstore.de/engine/procedures/om_GetTrolleyAsMatrix_Pub\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -189,8 +188,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=187,
-  serialized_end=1134,
+  serialized_start=149,
+  serialized_end=1096,
 )
 
 
@@ -353,8 +352,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1340,
-  serialized_end=2462,
+  serialized_start=1278,
+  serialized_end=2400,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -397,8 +396,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1137,
-  serialized_end=2462,
+  serialized_start=1099,
+  serialized_end=2400,
 )
 
 _PARAMETERS.fields_by_name['unique_id'].message_type = dstore_dot_values__pb2._STRINGVALUE
@@ -431,8 +430,8 @@ _RESPONSE_ROW.fields_by_name['product_description'].message_type = dstore_dot_va
 _RESPONSE_ROW.fields_by_name['x_axis_value_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['relative_surcharge'].message_type = dstore_dot_values__pb2._DECIMALVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

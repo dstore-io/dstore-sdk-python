@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/mi_GetApplicationSettings_Pu.proto',
   package='dstore.engine.mi_GetApplicationSettings_Pu',
   syntax='proto3',
-  serialized_pb=_b('\n;dstore/engine/procedures/mi_GetApplicationSettings_Pu.proto\x12*dstore.engine.mi_GetApplicationSettings_Pu\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x91\x03\n\nParameters\x12\x33\n\x0e\x61pplication_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1c\n\x13\x61pplication_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0ckey_variable\x18\x02 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x1a\n\x11key_variable_null\x18\xea\x07 \x01(\x08\x12\x46\n!search_for_key_variable_with_like\x18\x03 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12/\n&search_for_key_variable_with_like_null\x18\xeb\x07 \x01(\x08\x12?\n\x1aget_values_for_global_user\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12(\n\x1fget_values_for_global_user_null\x18\xec\x07 \x01(\x08\"\x8a\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x45\n\x03row\x18\x04 \x03(\x0b\x32\x38.dstore.engine.mi_GetApplicationSettings_Pu.Response.Row\x1a\xbb\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12*\n\x05value\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x31\n\x0ckey_variable\x18\x92N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x44\n\x1evalue_derived_from_global_user\x18\x93N \x01(\x0b\x32\x1b.dstore.values.booleanValueB]\n\x1bio.dstore.engine.proceduresZ>gosdk.dstore.de/engine/procedures/mi_GetApplicationSettings_Pub\x06proto3')
+  serialized_pb=_b('\n;dstore/engine/procedures/mi_GetApplicationSettings_Pu.proto\x12*dstore.engine.mi_GetApplicationSettings_Pu\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x91\x03\n\nParameters\x12\x33\n\x0e\x61pplication_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1c\n\x13\x61pplication_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0ckey_variable\x18\x02 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x1a\n\x11key_variable_null\x18\xea\x07 \x01(\x08\x12\x46\n!search_for_key_variable_with_like\x18\x03 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12/\n&search_for_key_variable_with_like_null\x18\xeb\x07 \x01(\x08\x12?\n\x1aget_values_for_global_user\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12(\n\x1fget_values_for_global_user_null\x18\xec\x07 \x01(\x08\"\xf2\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x45\n\x03row\x18\x04 \x03(\x0b\x32\x38.dstore.engine.mi_GetApplicationSettings_Pu.Response.Row\x1a\xbb\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12*\n\x05value\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x31\n\x0ckey_variable\x18\x92N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x44\n\x1evalue_derived_from_global_user\x18\x93N \x01(\x0b\x32\x1b.dstore.values.BooleanValueB]\n\x1bio.dstore.engine.proceduresZ>gosdk.dstore.de/engine/procedures/mi_GetApplicationSettings_Pub\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=596,
+  serialized_start=157,
+  serialized_end=558,
 )
 
 
@@ -157,8 +156,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=993,
+  serialized_start=744,
+  serialized_end=931,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -201,8 +200,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=599,
-  serialized_end=993,
+  serialized_start=561,
+  serialized_end=931,
 )
 
 _PARAMETERS.fields_by_name['application_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -213,8 +212,8 @@ _RESPONSE_ROW.fields_by_name['value'].message_type = dstore_dot_values__pb2._STR
 _RESPONSE_ROW.fields_by_name['key_variable'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.fields_by_name['value_derived_from_global_user'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE
