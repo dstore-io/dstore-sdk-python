@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/mi_GetUsageOfTables_Ad.proto',
   package='dstore.engine.mi_GetUsageOfTables_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n5dstore/engine/procedures/mi_GetUsageOfTables_Ad.proto\x12$dstore.engine.mi_GetUsageOfTables_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xee\x03\n\nParameters\x12/\n\x0btables_list\x18\x01 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x19\n\x10tables_list_null\x18\xe9\x07 \x01(\x08\x12<\n\x18separator_in_tables_list\x18\x02 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12&\n\x1dseparator_in_tables_list_null\x18\xea\x07 \x01(\x08\x12;\n\x17search_only_object_type\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12%\n\x1csearch_only_object_type_null\x18\xeb\x07 \x01(\x08\x12\x43\n\x1eget_distinct_object_names_only\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12,\n#get_distinct_object_names_only_null\x18\xec\x07 \x01(\x08\x12\x36\n\x11number_of_results\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1f\n\x16number_of_results_null\x18\xed\x07 \x01(\x08\"\x94\x04\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.mi_GetUsageOfTables_Ad.Response.Row\x12\x36\n\x11number_of_results\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\x93\x02\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12/\n\ntable_name\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x30\n\x0bobject_type\x18\x92N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x36\n\x10\x63ode_line_number\x18\x93N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12.\n\tcode_line\x18\x94N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x30\n\x0bobject_name\x18\x95N \x01(\x0b\x32\x1a.dstore.values.stringValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/mi_GetUsageOfTables_Adb\x06proto3')
+  serialized_pb=_b('\n5dstore/engine/procedures/mi_GetUsageOfTables_Ad.proto\x12$dstore.engine.mi_GetUsageOfTables_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xee\x03\n\nParameters\x12/\n\x0btables_list\x18\x01 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x19\n\x10tables_list_null\x18\xe9\x07 \x01(\x08\x12<\n\x18separator_in_tables_list\x18\x02 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12&\n\x1dseparator_in_tables_list_null\x18\xea\x07 \x01(\x08\x12;\n\x17search_only_object_type\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12%\n\x1csearch_only_object_type_null\x18\xeb\x07 \x01(\x08\x12\x43\n\x1eget_distinct_object_names_only\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12,\n#get_distinct_object_names_only_null\x18\xec\x07 \x01(\x08\x12\x36\n\x11number_of_results\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1f\n\x16number_of_results_null\x18\xed\x07 \x01(\x08\"\xfc\x03\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.mi_GetUsageOfTables_Ad.Response.Row\x12\x36\n\x11number_of_results\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\x93\x02\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12/\n\ntable_name\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x30\n\x0bobject_type\x18\x92N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x36\n\x10\x63ode_line_number\x18\x93N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12.\n\tcode_line\x18\x94N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x30\n\x0bobject_name\x18\x95N \x01(\x0b\x32\x1a.dstore.values.StringValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/mi_GetUsageOfTables_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -119,8 +118,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=677,
+  serialized_start=145,
+  serialized_end=639,
 )
 
 
@@ -185,8 +184,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=937,
-  serialized_end=1212,
+  serialized_start=875,
+  serialized_end=1150,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -236,8 +235,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=680,
-  serialized_end=1212,
+  serialized_start=642,
+  serialized_end=1150,
 )
 
 _PARAMETERS.fields_by_name['tables_list'].message_type = dstore_dot_values__pb2._STRINGVALUE
@@ -251,8 +250,8 @@ _RESPONSE_ROW.fields_by_name['code_line_number'].message_type = dstore_dot_value
 _RESPONSE_ROW.fields_by_name['code_line'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.fields_by_name['object_name'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['number_of_results'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

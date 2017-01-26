@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_GetCashAccountTypes.proto',
   package='dstore.engine.om_GetCashAccountTypes',
   syntax='proto3',
-  serialized_pb=_b('\n5dstore/engine/procedures/om_GetCashAccountTypes.proto\x12$dstore.engine.om_GetCashAccountTypes\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x0c\n\nParameters\"\x8e\x03\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.om_GetCashAccountTypes.Response.Row\x1a\xc5\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x36\n\x11\x63\x61sh_account_type\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12:\n\x14\x63\x61sh_account_type_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x39\n\x13min_account_balance\x18\x93N \x01(\x0b\x32\x1b.dstore.values.decimalValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/om_GetCashAccountTypesb\x06proto3')
+  serialized_pb=_b('\n5dstore/engine/procedures/om_GetCashAccountTypes.proto\x12$dstore.engine.om_GetCashAccountTypes\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x0c\n\nParameters\"\xf6\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.om_GetCashAccountTypes.Response.Row\x1a\xc5\x01\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x36\n\x11\x63\x61sh_account_type\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12:\n\x14\x63\x61sh_account_type_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x39\n\x13min_account_balance\x18\x93N \x01(\x0b\x32\x1b.dstore.values.DecimalValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/om_GetCashAccountTypesb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -49,8 +48,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=182,
-  serialized_end=194,
+  serialized_start=144,
+  serialized_end=156,
 )
 
 
@@ -101,8 +100,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=398,
-  serialized_end=595,
+  serialized_start=336,
+  serialized_end=533,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -145,16 +144,16 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=197,
-  serialized_end=595,
+  serialized_start=159,
+  serialized_end=533,
 )
 
 _RESPONSE_ROW.fields_by_name['cash_account_type'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.fields_by_name['cash_account_type_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['min_account_balance'].message_type = dstore_dot_values__pb2._DECIMALVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/im_GetModifiedNodes_Ad.proto',
   package='dstore.engine.im_GetModifiedNodes_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n5dstore/engine/procedures/im_GetModifiedNodes_Ad.proto\x12$dstore.engine.im_GetModifiedNodes_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xe3\t\n\nParameters\x12\x39\n\x12\x66rom_date_and_time\x18\x01 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12 \n\x17\x66rom_date_and_time_null\x18\xe9\x07 \x01(\x08\x12\x37\n\x10to_date_and_time\x18\x02 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x1e\n\x15to_date_and_time_null\x18\xea\x07 \x01(\x08\x12\x38\n\x13\x64omain_tree_node_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12!\n\x18\x64omain_tree_node_id_null\x18\xeb\x07 \x01(\x08\x12\x36\n\x11get_tree_node_ids\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1f\n\x16get_tree_node_ids_null\x18\xec\x07 \x01(\x08\x12\x39\n\x14\x66ilter_ids_in_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\"\n\x19\x66ilter_ids_in_one_id_null\x18\xed\x07 \x01(\x08\x12\x37\n\x12output_into_one_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12 \n\x17output_into_one_id_null\x18\xee\x07 \x01(\x08\x12>\n\x19include_deactivated_nodes\x18\x07 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\'\n\x1einclude_deactivated_nodes_null\x18\xef\x07 \x01(\x08\x12-\n\x08level_id\x18\x08 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rlevel_id_null\x18\xf0\x07 \x01(\x08\x12\x45\n!node_modif_def_meta_info_type_ids\x18\t \x01(\x0b\x32\x1a.dstore.values.stringValue\x12/\n&node_modif_def_meta_info_type_ids_null\x18\xf1\x07 \x01(\x08\x12G\n#t_node_modif_def_meta_info_type_ids\x18\n \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x31\n(t_node_modif_def_meta_info_type_ids_null\x18\xf2\x07 \x01(\x08\x12\x34\n\x0fstart_at_row_no\x18\x0b \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1d\n\x14start_at_row_no_null\x18\xf3\x07 \x01(\x08\x12.\n\trow_count\x18\x0c \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x17\n\x0erow_count_null\x18\xf4\x07 \x01(\x08\x12\x41\n\x1cnumber_of_elements_in_result\x18\r \x01(\x0b\x32\x1b.dstore.values.integerValue\x12*\n!number_of_elements_in_result_null\x18\xf5\x07 \x01(\x08\"\xac\x07\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.im_GetModifiedNodes_Ad.Response.Row\x12\x41\n\x1cnumber_of_elements_in_result\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\xa0\x05\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x35\n\x10node_description\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12-\n\x07node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x41\n\x1cmatched_info_type_ids_t_node\x18\x93N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12?\n\x1amatched_info_type_ids_node\x18\x94N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12.\n\x08level_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12-\n\x06\x61\x63tive\x18\xa1\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x33\n\x0ctree_node_id\x18\xa3\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x42\n\x1cpre_predecessors_description\x18\xa5\x9c\x01 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x44\n\x1dpre_predecessors_tree_node_id\x18\xa7\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12@\n\x19predecessors_tree_node_id\x18\xa9\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12>\n\x18predecessors_description\x18\xaa\x9c\x01 \x01(\x0b\x32\x1a.dstore.values.stringValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/im_GetModifiedNodes_Adb\x06proto3')
+  serialized_pb=_b('\n5dstore/engine/procedures/im_GetModifiedNodes_Ad.proto\x12$dstore.engine.im_GetModifiedNodes_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xe3\t\n\nParameters\x12\x39\n\x12\x66rom_date_and_time\x18\x01 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12 \n\x17\x66rom_date_and_time_null\x18\xe9\x07 \x01(\x08\x12\x37\n\x10to_date_and_time\x18\x02 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x1e\n\x15to_date_and_time_null\x18\xea\x07 \x01(\x08\x12\x38\n\x13\x64omain_tree_node_id\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12!\n\x18\x64omain_tree_node_id_null\x18\xeb\x07 \x01(\x08\x12\x36\n\x11get_tree_node_ids\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1f\n\x16get_tree_node_ids_null\x18\xec\x07 \x01(\x08\x12\x39\n\x14\x66ilter_ids_in_one_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\"\n\x19\x66ilter_ids_in_one_id_null\x18\xed\x07 \x01(\x08\x12\x37\n\x12output_into_one_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12 \n\x17output_into_one_id_null\x18\xee\x07 \x01(\x08\x12>\n\x19include_deactivated_nodes\x18\x07 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\'\n\x1einclude_deactivated_nodes_null\x18\xef\x07 \x01(\x08\x12-\n\x08level_id\x18\x08 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rlevel_id_null\x18\xf0\x07 \x01(\x08\x12\x45\n!node_modif_def_meta_info_type_ids\x18\t \x01(\x0b\x32\x1a.dstore.values.StringValue\x12/\n&node_modif_def_meta_info_type_ids_null\x18\xf1\x07 \x01(\x08\x12G\n#t_node_modif_def_meta_info_type_ids\x18\n \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x31\n(t_node_modif_def_meta_info_type_ids_null\x18\xf2\x07 \x01(\x08\x12\x34\n\x0fstart_at_row_no\x18\x0b \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1d\n\x14start_at_row_no_null\x18\xf3\x07 \x01(\x08\x12.\n\trow_count\x18\x0c \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x17\n\x0erow_count_null\x18\xf4\x07 \x01(\x08\x12\x41\n\x1cnumber_of_elements_in_result\x18\r \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12*\n!number_of_elements_in_result_null\x18\xf5\x07 \x01(\x08\"\x94\x07\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12?\n\x03row\x18\x04 \x03(\x0b\x32\x32.dstore.engine.im_GetModifiedNodes_Ad.Response.Row\x12\x41\n\x1cnumber_of_elements_in_result\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\xa0\x05\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x35\n\x10node_description\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12-\n\x07node_id\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x41\n\x1cmatched_info_type_ids_t_node\x18\x93N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12?\n\x1amatched_info_type_ids_node\x18\x94N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12.\n\x08level_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12-\n\x06\x61\x63tive\x18\xa1\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x33\n\x0ctree_node_id\x18\xa3\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x42\n\x1cpre_predecessors_description\x18\xa5\x9c\x01 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x44\n\x1dpre_predecessors_tree_node_id\x18\xa7\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12@\n\x19predecessors_tree_node_id\x18\xa9\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12>\n\x18predecessors_description\x18\xaa\x9c\x01 \x01(\x0b\x32\x1a.dstore.values.StringValueBW\n\x1bio.dstore.engine.proceduresZ8gosdk.dstore.de/engine/procedures/im_GetModifiedNodes_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -231,8 +230,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=1434,
+  serialized_start=145,
+  serialized_end=1396,
 )
 
 
@@ -339,8 +338,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1705,
-  serialized_end=2377,
+  serialized_start=1643,
+  serialized_end=2315,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -390,8 +389,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1437,
-  serialized_end=2377,
+  serialized_start=1399,
+  serialized_end=2315,
 )
 
 _PARAMETERS.fields_by_name['from_date_and_time'].message_type = dstore_dot_values__pb2._TIMESTAMPVALUE
@@ -419,8 +418,8 @@ _RESPONSE_ROW.fields_by_name['pre_predecessors_tree_node_id'].message_type = dst
 _RESPONSE_ROW.fields_by_name['predecessors_tree_node_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['predecessors_description'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['number_of_elements_in_result'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

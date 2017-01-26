@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_ModifyBonusItemSets_Ad.proto',
   package='dstore.engine.om_ModifyBonusItemSets_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n8dstore/engine/procedures/om_ModifyBonusItemSets_Ad.proto\x12\'dstore.engine.om_ModifyBonusItemSets_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xcc\x02\n\nParameters\x12\x30\n\x0bitem_set_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10item_set_id_null\x18\xe9\x07 \x01(\x08\x12\x36\n\x11item_condition_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1f\n\x16item_condition_id_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0cmax_quantity\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1a\n\x11max_quantity_null\x18\xeb\x07 \x01(\x08\x12/\n\ndelete_set\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x18\n\x0f\x64\x65lete_set_null\x18\xec\x07 \x01(\x08\"\x93\x02\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x42\n\x03row\x18\x04 \x03(\x0b\x32\x35.dstore.engine.om_ModifyBonusItemSets_Ad.Response.Row\x12\x30\n\x0bitem_set_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42Z\n\x1bio.dstore.engine.proceduresZ;gosdk.dstore.de/engine/procedures/om_ModifyBonusItemSets_Adb\x06proto3')
+  serialized_pb=_b('\n8dstore/engine/procedures/om_ModifyBonusItemSets_Ad.proto\x12\'dstore.engine.om_ModifyBonusItemSets_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xcc\x02\n\nParameters\x12\x30\n\x0bitem_set_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10item_set_id_null\x18\xe9\x07 \x01(\x08\x12\x36\n\x11item_condition_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1f\n\x16item_condition_id_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0cmax_quantity\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1a\n\x11max_quantity_null\x18\xeb\x07 \x01(\x08\x12/\n\ndelete_set\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x18\n\x0f\x64\x65lete_set_null\x18\xec\x07 \x01(\x08\"\xfb\x01\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x42\n\x03row\x18\x04 \x03(\x0b\x32\x35.dstore.engine.om_ModifyBonusItemSets_Ad.Response.Row\x12\x30\n\x0bitem_set_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42Z\n\x1bio.dstore.engine.proceduresZ;gosdk.dstore.de/engine/procedures/om_ModifyBonusItemSets_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=189,
-  serialized_end=521,
+  serialized_start=151,
+  serialized_end=483,
 )
 
 
@@ -136,8 +135,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=777,
-  serialized_end=799,
+  serialized_start=715,
+  serialized_end=737,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -187,8 +186,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=524,
-  serialized_end=799,
+  serialized_start=486,
+  serialized_end=737,
 )
 
 _PARAMETERS.fields_by_name['item_set_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -196,8 +195,8 @@ _PARAMETERS.fields_by_name['item_condition_id'].message_type = dstore_dot_values
 _PARAMETERS.fields_by_name['max_quantity'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _PARAMETERS.fields_by_name['delete_set'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['item_set_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

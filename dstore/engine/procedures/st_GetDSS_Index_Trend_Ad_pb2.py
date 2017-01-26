@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/st_GetDSS_Index_Trend_Ad.proto',
   package='dstore.engine.st_GetDSS_Index_Trend_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n7dstore/engine/procedures/st_GetDSS_Index_Trend_Ad.proto\x12&dstore.engine.st_GetDSS_Index_Trend_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xe0\n\n\nParameters\x12\x38\n\x13\x64omain_tree_node_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12!\n\x18\x64omain_tree_node_id_null\x18\xe9\x07 \x01(\x08\x12/\n\nintervalls\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x18\n\x0fintervalls_null\x18\xea\x07 \x01(\x08\x12:\n\x15minutes_per_intervall\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12#\n\x1aminutes_per_intervall_null\x18\xeb\x07 \x01(\x08\x12<\n\x17group_by_nodes_on_level\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12%\n\x1cgroup_by_nodes_on_level_null\x18\xec\x07 \x01(\x08\x12\x30\n\x0bis_level_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x19\n\x10is_level_id_null\x18\xed\x07 \x01(\x08\x12\x44\n\x1fgroup_by_node_characteristic_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12-\n$group_by_node_characteristic_id_null\x18\xee\x07 \x01(\x08\x12:\n\x15only_values_in_one_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12#\n\x1aonly_values_in_one_id_null\x18\xef\x07 \x01(\x08\x12\x44\n\x1fids_in_one_id_are_tree_node_ids\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12-\n$ids_in_one_id_are_tree_node_ids_null\x18\xf0\x07 \x01(\x08\x12\x31\n\x0cweight_views\x18\t \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x1a\n\x11weight_views_null\x18\xf1\x07 \x01(\x08\x12;\n\x16weight_buying_interest\x18\n \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12$\n\x1bweight_buying_interest_null\x18\xf2\x07 \x01(\x08\x12\x31\n\x0cweight_order\x18\x0b \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x1a\n\x11weight_order_null\x18\xf3\x07 \x01(\x08\x12>\n\x19include_deactivated_nodes\x18\x0c \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\'\n\x1einclude_deactivated_nodes_null\x18\xf4\x07 \x01(\x08\x12G\n\"include_nodes_without_tree_node_id\x18\r \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x30\n\'include_nodes_without_tree_node_id_null\x18\xf5\x07 \x01(\x08\x12>\n\x19order_result_by_intervall\x18\x0e \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\'\n\x1eorder_result_by_intervall_null\x18\xf6\x07 \x01(\x08\"\xff\x04\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x41\n\x03row\x18\x04 \x03(\x0b\x32\x34.dstore.engine.st_GetDSS_Index_Trend_Ad.Response.Row\x1a\xb4\x03\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x37\n\x0fintervall_start\x18\x91N \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12,\n\x06orders\x18\x92N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x31\n\x0bv_b_o_index\x18\x93N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x31\n\x0btrend_of_id\x18\x94N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12+\n\x05views\x18\x95N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x39\n\x14trend_of_description\x18\x96N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12/\n\tintervall\x18\x97N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x36\n\x10\x62uying_interests\x18\x98N \x01(\x0b\x32\x1b.dstore.values.decimalValueBY\n\x1bio.dstore.engine.proceduresZ:gosdk.dstore.de/engine/procedures/st_GetDSS_Index_Trend_Adb\x06proto3')
+  serialized_pb=_b('\n7dstore/engine/procedures/st_GetDSS_Index_Trend_Ad.proto\x12&dstore.engine.st_GetDSS_Index_Trend_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xe0\n\n\nParameters\x12\x38\n\x13\x64omain_tree_node_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12!\n\x18\x64omain_tree_node_id_null\x18\xe9\x07 \x01(\x08\x12/\n\nintervalls\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x18\n\x0fintervalls_null\x18\xea\x07 \x01(\x08\x12:\n\x15minutes_per_intervall\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12#\n\x1aminutes_per_intervall_null\x18\xeb\x07 \x01(\x08\x12<\n\x17group_by_nodes_on_level\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12%\n\x1cgroup_by_nodes_on_level_null\x18\xec\x07 \x01(\x08\x12\x30\n\x0bis_level_id\x18\x05 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x19\n\x10is_level_id_null\x18\xed\x07 \x01(\x08\x12\x44\n\x1fgroup_by_node_characteristic_id\x18\x06 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12-\n$group_by_node_characteristic_id_null\x18\xee\x07 \x01(\x08\x12:\n\x15only_values_in_one_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12#\n\x1aonly_values_in_one_id_null\x18\xef\x07 \x01(\x08\x12\x44\n\x1fids_in_one_id_are_tree_node_ids\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12-\n$ids_in_one_id_are_tree_node_ids_null\x18\xf0\x07 \x01(\x08\x12\x31\n\x0cweight_views\x18\t \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x1a\n\x11weight_views_null\x18\xf1\x07 \x01(\x08\x12;\n\x16weight_buying_interest\x18\n \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12$\n\x1bweight_buying_interest_null\x18\xf2\x07 \x01(\x08\x12\x31\n\x0cweight_order\x18\x0b \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x1a\n\x11weight_order_null\x18\xf3\x07 \x01(\x08\x12>\n\x19include_deactivated_nodes\x18\x0c \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\'\n\x1einclude_deactivated_nodes_null\x18\xf4\x07 \x01(\x08\x12G\n\"include_nodes_without_tree_node_id\x18\r \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x30\n\'include_nodes_without_tree_node_id_null\x18\xf5\x07 \x01(\x08\x12>\n\x19order_result_by_intervall\x18\x0e \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\'\n\x1eorder_result_by_intervall_null\x18\xf6\x07 \x01(\x08\"\xe7\x04\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x41\n\x03row\x18\x04 \x03(\x0b\x32\x34.dstore.engine.st_GetDSS_Index_Trend_Ad.Response.Row\x1a\xb4\x03\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x37\n\x0fintervall_start\x18\x91N \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12,\n\x06orders\x18\x92N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x31\n\x0bv_b_o_index\x18\x93N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x31\n\x0btrend_of_id\x18\x94N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12+\n\x05views\x18\x95N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x39\n\x14trend_of_description\x18\x96N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12/\n\tintervall\x18\x97N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x36\n\x10\x62uying_interests\x18\x98N \x01(\x0b\x32\x1b.dstore.values.DecimalValueBY\n\x1bio.dstore.engine.proceduresZ:gosdk.dstore.de/engine/procedures/st_GetDSS_Index_Trend_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -245,8 +244,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=187,
-  serialized_end=1563,
+  serialized_start=149,
+  serialized_end=1525,
 )
 
 
@@ -332,8 +331,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1769,
-  serialized_end=2205,
+  serialized_start=1707,
+  serialized_end=2143,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -376,8 +375,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1566,
-  serialized_end=2205,
+  serialized_start=1528,
+  serialized_end=2143,
 )
 
 _PARAMETERS.fields_by_name['domain_tree_node_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -403,8 +402,8 @@ _RESPONSE_ROW.fields_by_name['trend_of_description'].message_type = dstore_dot_v
 _RESPONSE_ROW.fields_by_name['intervall'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['buying_interests'].message_type = dstore_dot_values__pb2._DECIMALVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

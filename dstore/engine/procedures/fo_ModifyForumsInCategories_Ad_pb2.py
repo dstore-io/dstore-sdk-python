@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/fo_ModifyForumsInCategories_Ad.proto',
   package='dstore.engine.fo_ModifyForumsInCategories_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n=dstore/engine/procedures/fo_ModifyForumsInCategories_Ad.proto\x12,dstore.engine.fo_ModifyForumsInCategories_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xec\x02\n\nParameters\x12\x36\n\x11\x66orum_category_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1f\n\x16\x66orum_category_id_null\x18\xe9\x07 \x01(\x08\x12-\n\x08\x66orum_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rforum_id_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0cmove_sort_no\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1a\n\x11move_sort_no_null\x18\xeb\x07 \x01(\x08\x12\x42\n\x1dremove_forum_id_from_category\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12+\n\"remove_forum_id_from_category_null\x18\xec\x07 \x01(\x08\"\xe6\x01\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.fo_ModifyForumsInCategories_Ad.Response.Row\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/fo_ModifyForumsInCategories_Adb\x06proto3')
+  serialized_pb=_b('\n=dstore/engine/procedures/fo_ModifyForumsInCategories_Ad.proto\x12,dstore.engine.fo_ModifyForumsInCategories_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xec\x02\n\nParameters\x12\x36\n\x11\x66orum_category_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1f\n\x16\x66orum_category_id_null\x18\xe9\x07 \x01(\x08\x12-\n\x08\x66orum_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rforum_id_null\x18\xea\x07 \x01(\x08\x12\x31\n\x0cmove_sort_no\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1a\n\x11move_sort_no_null\x18\xeb\x07 \x01(\x08\x12\x42\n\x1dremove_forum_id_from_category\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12+\n\"remove_forum_id_from_category_null\x18\xec\x07 \x01(\x08\"\xce\x01\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.fo_ModifyForumsInCategories_Ad.Response.Row\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/fo_ModifyForumsInCategories_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=563,
+  serialized_start=161,
+  serialized_end=525,
 )
 
 
@@ -136,8 +135,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=774,
-  serialized_end=796,
+  serialized_start=712,
+  serialized_end=734,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -180,8 +179,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=796,
+  serialized_start=528,
+  serialized_end=734,
 )
 
 _PARAMETERS.fields_by_name['forum_category_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -189,8 +188,8 @@ _PARAMETERS.fields_by_name['forum_id'].message_type = dstore_dot_values__pb2._IN
 _PARAMETERS.fields_by_name['move_sort_no'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _PARAMETERS.fields_by_name['remove_forum_id_from_category'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/st_GetPersonPMStatistics_Ad.proto',
   package='dstore.engine.st_GetPersonPMStatistics_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n:dstore/engine/procedures/st_GetPersonPMStatistics_Ad.proto\x12)dstore.engine.st_GetPersonPMStatistics_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xd8\x05\n\nParameters\x12.\n\nperson_ids\x18\x01 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0fperson_ids_null\x18\xe9\x07 \x01(\x08\x12/\n\nfrom_month\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x18\n\x0f\x66rom_month_null\x18\xea\x07 \x01(\x08\x12.\n\tfrom_year\x18\x03 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x17\n\x0e\x66rom_year_null\x18\xeb\x07 \x01(\x08\x12-\n\x08to_month\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rto_month_null\x18\xec\x07 \x01(\x08\x12,\n\x07to_year\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x15\n\x0cto_year_null\x18\xed\x07 \x01(\x08\x12@\n\x1c\x62\x61sic_characteristic_numbers\x18\x06 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12*\n!basic_characteristic_numbers_null\x18\xee\x07 \x01(\x08\x12\x33\n\x0fh_tree_node_ids\x18\x07 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x1d\n\x14h_tree_node_ids_null\x18\xef\x07 \x01(\x08\x12\x35\n\x10summarize_months\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1e\n\x15summarize_months_null\x18\xf0\x07 \x01(\x08\x12.\n\tget_top_x\x18\t \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x17\n\x0eget_top_x_null\x18\xf1\x07 \x01(\x08\"\xae\x06\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x44\n\x03row\x18\x04 \x03(\x0b\x32\x37.dstore.engine.st_GetPersonPMStatistics_Ad.Response.Row\x1a\xe0\x04\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x41\n\x1cvalue1_restricted_by_pattern\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12+\n\x05month\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x41\n\x1cvalue2_restricted_by_pattern\x18\x93N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x31\n\x0btotal_value\x18\x94N \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12*\n\x04year\x18\x95N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12/\n\tperson_id\x18\x96N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x34\n\x0eh_tree_node_id\x18\x97N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12+\n\x06value1\x18\x98N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12+\n\x06value2\x18\x99N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x32\n\x0c\x64irect_value\x18\x9aN \x01(\x0b\x32\x1b.dstore.values.decimalValue\x12\x41\n\x1b\x62\x61sic_characteristic_number\x18\x9bN \x01(\x0b\x32\x1b.dstore.values.integerValueB\\\n\x1bio.dstore.engine.proceduresZ=gosdk.dstore.de/engine/procedures/st_GetPersonPMStatistics_Adb\x06proto3')
+  serialized_pb=_b('\n:dstore/engine/procedures/st_GetPersonPMStatistics_Ad.proto\x12)dstore.engine.st_GetPersonPMStatistics_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xd8\x05\n\nParameters\x12.\n\nperson_ids\x18\x01 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0fperson_ids_null\x18\xe9\x07 \x01(\x08\x12/\n\nfrom_month\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x18\n\x0f\x66rom_month_null\x18\xea\x07 \x01(\x08\x12.\n\tfrom_year\x18\x03 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x17\n\x0e\x66rom_year_null\x18\xeb\x07 \x01(\x08\x12-\n\x08to_month\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rto_month_null\x18\xec\x07 \x01(\x08\x12,\n\x07to_year\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x15\n\x0cto_year_null\x18\xed\x07 \x01(\x08\x12@\n\x1c\x62\x61sic_characteristic_numbers\x18\x06 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12*\n!basic_characteristic_numbers_null\x18\xee\x07 \x01(\x08\x12\x33\n\x0fh_tree_node_ids\x18\x07 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x1d\n\x14h_tree_node_ids_null\x18\xef\x07 \x01(\x08\x12\x35\n\x10summarize_months\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1e\n\x15summarize_months_null\x18\xf0\x07 \x01(\x08\x12.\n\tget_top_x\x18\t \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x17\n\x0eget_top_x_null\x18\xf1\x07 \x01(\x08\"\x96\x06\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x44\n\x03row\x18\x04 \x03(\x0b\x32\x37.dstore.engine.st_GetPersonPMStatistics_Ad.Response.Row\x1a\xe0\x04\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x41\n\x1cvalue1_restricted_by_pattern\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12+\n\x05month\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x41\n\x1cvalue2_restricted_by_pattern\x18\x93N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x31\n\x0btotal_value\x18\x94N \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12*\n\x04year\x18\x95N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12/\n\tperson_id\x18\x96N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x34\n\x0eh_tree_node_id\x18\x97N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12+\n\x06value1\x18\x98N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12+\n\x06value2\x18\x99N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x32\n\x0c\x64irect_value\x18\x9aN \x01(\x0b\x32\x1b.dstore.values.DecimalValue\x12\x41\n\x1b\x62\x61sic_characteristic_number\x18\x9bN \x01(\x0b\x32\x1b.dstore.values.IntegerValueB\\\n\x1bio.dstore.engine.proceduresZ=gosdk.dstore.de/engine/procedures/st_GetPersonPMStatistics_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -175,8 +174,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=193,
-  serialized_end=921,
+  serialized_start=155,
+  serialized_end=883,
 )
 
 
@@ -283,8 +282,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1130,
-  serialized_end=1738,
+  serialized_start=1068,
+  serialized_end=1676,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -327,8 +326,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=924,
-  serialized_end=1738,
+  serialized_start=886,
+  serialized_end=1676,
 )
 
 _PARAMETERS.fields_by_name['person_ids'].message_type = dstore_dot_values__pb2._STRINGVALUE
@@ -352,8 +351,8 @@ _RESPONSE_ROW.fields_by_name['value2'].message_type = dstore_dot_values__pb2._ST
 _RESPONSE_ROW.fields_by_name['direct_value'].message_type = dstore_dot_values__pb2._DECIMALVALUE
 _RESPONSE_ROW.fields_by_name['basic_characteristic_number'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

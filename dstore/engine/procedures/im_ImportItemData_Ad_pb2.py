@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/im_ImportItemData_Ad.proto',
   package='dstore.engine.im_ImportItemData_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n3dstore/engine/procedures/im_ImportItemData_Ad.proto\x12\"dstore.engine.im_ImportItemData_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xd5\n\n\nParameters\x12/\n\nlog_errors\x18\x01 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x18\n\x0flog_errors_null\x18\xe9\x07 \x01(\x08\x12\x33\n\x0eupdate_sort_no\x18\x02 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1c\n\x13update_sort_no_null\x18\xea\x07 \x01(\x08\x12?\n\x1a\x63heck_text_and_bit_characs\x18\x03 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12(\n\x1f\x63heck_text_and_bit_characs_null\x18\xeb\x07 \x01(\x08\x12\x46\n!check_except_text_and_bit_characs\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12/\n&check_except_text_and_bit_characs_null\x18\xec\x07 \x01(\x08\x12\x37\n\x12performance_tuning\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12 \n\x17performance_tuning_null\x18\xed\x07 \x01(\x08\x12<\n\x17\x61\x63tivate_imported_items\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12%\n\x1c\x61\x63tivate_imported_items_null\x18\xee\x07 \x01(\x08\x12\x46\n!handle_existing_item_not_imported\x18\x07 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12/\n&handle_existing_item_not_imported_null\x18\xef\x07 \x01(\x08\x12\x35\n\x10\x64ump_transaction\x18\x08 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1e\n\x15\x64ump_transaction_null\x18\xf0\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\t \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x15\n\x0c\x63ountry_null\x18\xf1\x07 \x01(\x08\x12\x43\n\x1e\x65mpty_string_to_delete_details\x18\n \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12,\n#empty_string_to_delete_details_null\x18\xf2\x07 \x01(\x08\x12\x44\n\x1f\x65mpty_string_to_delete_property\x18\x0b \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12-\n$empty_string_to_delete_property_null\x18\xf3\x07 \x01(\x08\x12:\n\x13\x65rror_date_and_time\x18\x0c \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12!\n\x18\x65rror_date_and_time_null\x18\xf4\x07 \x01(\x08\x12:\n\x16import_from_table_name\x18\r \x01(\x0b\x32\x1a.dstore.values.stringValue\x12$\n\x1bimport_from_table_name_null\x18\xf5\x07 \x01(\x08\x12.\n\ndebug_mode\x18\x0e \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0f\x64\x65\x62ug_mode_null\x18\xf6\x07 \x01(\x08\"\x98\x02\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12=\n\x03row\x18\x04 \x03(\x0b\x32\x30.dstore.engine.im_ImportItemData_Ad.Response.Row\x12:\n\x13\x65rror_date_and_time\x18\x65 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42U\n\x1bio.dstore.engine.proceduresZ6gosdk.dstore.de/engine/procedures/im_ImportItemData_Adb\x06proto3')
+  serialized_pb=_b('\n3dstore/engine/procedures/im_ImportItemData_Ad.proto\x12\"dstore.engine.im_ImportItemData_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xd5\n\n\nParameters\x12/\n\nlog_errors\x18\x01 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x18\n\x0flog_errors_null\x18\xe9\x07 \x01(\x08\x12\x33\n\x0eupdate_sort_no\x18\x02 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1c\n\x13update_sort_no_null\x18\xea\x07 \x01(\x08\x12?\n\x1a\x63heck_text_and_bit_characs\x18\x03 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12(\n\x1f\x63heck_text_and_bit_characs_null\x18\xeb\x07 \x01(\x08\x12\x46\n!check_except_text_and_bit_characs\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12/\n&check_except_text_and_bit_characs_null\x18\xec\x07 \x01(\x08\x12\x37\n\x12performance_tuning\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12 \n\x17performance_tuning_null\x18\xed\x07 \x01(\x08\x12<\n\x17\x61\x63tivate_imported_items\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12%\n\x1c\x61\x63tivate_imported_items_null\x18\xee\x07 \x01(\x08\x12\x46\n!handle_existing_item_not_imported\x18\x07 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12/\n&handle_existing_item_not_imported_null\x18\xef\x07 \x01(\x08\x12\x35\n\x10\x64ump_transaction\x18\x08 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1e\n\x15\x64ump_transaction_null\x18\xf0\x07 \x01(\x08\x12+\n\x07\x63ountry\x18\t \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x15\n\x0c\x63ountry_null\x18\xf1\x07 \x01(\x08\x12\x43\n\x1e\x65mpty_string_to_delete_details\x18\n \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12,\n#empty_string_to_delete_details_null\x18\xf2\x07 \x01(\x08\x12\x44\n\x1f\x65mpty_string_to_delete_property\x18\x0b \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12-\n$empty_string_to_delete_property_null\x18\xf3\x07 \x01(\x08\x12:\n\x13\x65rror_date_and_time\x18\x0c \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12!\n\x18\x65rror_date_and_time_null\x18\xf4\x07 \x01(\x08\x12:\n\x16import_from_table_name\x18\r \x01(\x0b\x32\x1a.dstore.values.StringValue\x12$\n\x1bimport_from_table_name_null\x18\xf5\x07 \x01(\x08\x12.\n\ndebug_mode\x18\x0e \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0f\x64\x65\x62ug_mode_null\x18\xf6\x07 \x01(\x08\"\x80\x02\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12=\n\x03row\x18\x04 \x03(\x0b\x32\x30.dstore.engine.im_ImportItemData_Ad.Response.Row\x12:\n\x13\x65rror_date_and_time\x18\x65 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42U\n\x1bio.dstore.engine.proceduresZ6gosdk.dstore.de/engine/procedures/im_ImportItemData_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -245,8 +244,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=179,
-  serialized_end=1544,
+  serialized_start=141,
+  serialized_end=1506,
 )
 
 
@@ -276,8 +275,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1805,
-  serialized_end=1827,
+  serialized_start=1743,
+  serialized_end=1765,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -327,8 +326,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1547,
-  serialized_end=1827,
+  serialized_start=1509,
+  serialized_end=1765,
 )
 
 _PARAMETERS.fields_by_name['log_errors'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
@@ -346,8 +345,8 @@ _PARAMETERS.fields_by_name['error_date_and_time'].message_type = dstore_dot_valu
 _PARAMETERS.fields_by_name['import_from_table_name'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _PARAMETERS.fields_by_name['debug_mode'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['error_date_and_time'].message_type = dstore_dot_values__pb2._TIMESTAMPVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

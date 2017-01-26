@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/pm_ModifyPersonPredefVals_Ad.proto',
   package='dstore.engine.pm_ModifyPersonPredefVals_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n;dstore/engine/procedures/pm_ModifyPersonPredefVals_Ad.proto\x12*dstore.engine.pm_ModifyPersonPredefVals_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xd3\x06\n\nParameters\x12-\n\x08value_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rvalue_id_null\x18\xe9\x07 \x01(\x08\x12=\n\x18person_characteristic_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12&\n\x1dperson_characteristic_id_null\x18\xea\x07 \x01(\x08\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x13\n\nvalue_null\x18\xeb\x07 \x01(\x08\x12\x30\n\x0blanguage_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10language_id_null\x18\xec\x07 \x01(\x08\x12,\n\x07sort_no\x18\x05 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x15\n\x0csort_no_null\x18\xed\x07 \x01(\x08\x12\x31\n\x0c\x64\x65lete_value\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1a\n\x11\x64\x65lete_value_null\x18\xee\x07 \x01(\x08\x12-\n\x08table_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rtable_id_null\x18\xef\x07 \x01(\x08\x12\x31\n\x0ctable_key_id\x18\x08 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x1a\n\x11table_key_id_null\x18\xf0\x07 \x01(\x08\x12\x45\n keep_references_if_value_changes\x18\t \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12.\n%keep_references_if_value_changes_null\x18\xf1\x07 \x01(\x08\x12?\n\x1a\x64\x65lete_table_key_reference\x18\n \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12(\n\x1f\x64\x65lete_table_key_reference_null\x18\xf2\x07 \x01(\x08\"\xe4\x01\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12\x45\n\x03row\x18\x04 \x03(\x0b\x32\x38.dstore.engine.pm_ModifyPersonPredefVals_Ad.Response.Row\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42]\n\x1bio.dstore.engine.proceduresZ>gosdk.dstore.de/engine/procedures/pm_ModifyPersonPredefVals_Adb\x06proto3')
+  serialized_pb=_b('\n;dstore/engine/procedures/pm_ModifyPersonPredefVals_Ad.proto\x12*dstore.engine.pm_ModifyPersonPredefVals_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xd3\x06\n\nParameters\x12-\n\x08value_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rvalue_id_null\x18\xe9\x07 \x01(\x08\x12=\n\x18person_characteristic_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12&\n\x1dperson_characteristic_id_null\x18\xea\x07 \x01(\x08\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x13\n\nvalue_null\x18\xeb\x07 \x01(\x08\x12\x30\n\x0blanguage_id\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10language_id_null\x18\xec\x07 \x01(\x08\x12,\n\x07sort_no\x18\x05 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x15\n\x0csort_no_null\x18\xed\x07 \x01(\x08\x12\x31\n\x0c\x64\x65lete_value\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1a\n\x11\x64\x65lete_value_null\x18\xee\x07 \x01(\x08\x12-\n\x08table_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rtable_id_null\x18\xef\x07 \x01(\x08\x12\x31\n\x0ctable_key_id\x18\x08 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x1a\n\x11table_key_id_null\x18\xf0\x07 \x01(\x08\x12\x45\n keep_references_if_value_changes\x18\t \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12.\n%keep_references_if_value_changes_null\x18\xf1\x07 \x01(\x08\x12?\n\x1a\x64\x65lete_table_key_reference\x18\n \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12(\n\x1f\x64\x65lete_table_key_reference_null\x18\xf2\x07 \x01(\x08\"\xcc\x01\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12\x45\n\x03row\x18\x04 \x03(\x0b\x32\x38.dstore.engine.pm_ModifyPersonPredefVals_Ad.Response.Row\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42]\n\x1bio.dstore.engine.proceduresZ>gosdk.dstore.de/engine/procedures/pm_ModifyPersonPredefVals_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -189,8 +188,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=1046,
+  serialized_start=157,
+  serialized_end=1008,
 )
 
 
@@ -220,8 +219,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1255,
-  serialized_end=1277,
+  serialized_start=1193,
+  serialized_end=1215,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -264,8 +263,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1049,
-  serialized_end=1277,
+  serialized_start=1011,
+  serialized_end=1215,
 )
 
 _PARAMETERS.fields_by_name['value_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -279,8 +278,8 @@ _PARAMETERS.fields_by_name['table_key_id'].message_type = dstore_dot_values__pb2
 _PARAMETERS.fields_by_name['keep_references_if_value_changes'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _PARAMETERS.fields_by_name['delete_table_key_reference'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

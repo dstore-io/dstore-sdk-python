@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_GetTrolleys_Ad.proto',
   package='dstore.engine.om_GetTrolleys_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n0dstore/engine/procedures/om_GetTrolleys_Ad.proto\x12\x1f\x64store.engine.om_GetTrolleys_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\x8a\x03\n\nParameters\x12\x39\n\x12\x66rom_date_and_time\x18\x01 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12 \n\x17\x66rom_date_and_time_null\x18\xe9\x07 \x01(\x08\x12\x37\n\x10to_date_and_time\x18\x02 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x1e\n\x15to_date_and_time_null\x18\xea\x07 \x01(\x08\x12@\n\x1bonly_for_identified_persons\x18\x03 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12)\n only_for_identified_persons_null\x18\xeb\x07 \x01(\x08\x12\x37\n\x12number_of_trolleys\x18\x04 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12 \n\x17number_of_trolleys_null\x18\xec\x07 \x01(\x08\"\xf4\x05\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12:\n\x03row\x18\x04 \x03(\x0b\x32-.dstore.engine.om_GetTrolleys_Ad.Response.Row\x12\x37\n\x12number_of_trolleys\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\xf7\x03\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x30\n\nvisitor_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x36\n\x11identifying_value\x18\x92N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12/\n\tperson_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12;\n\x13input_date_and_time\x18\x94N \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x34\n\x0eh_tree_node_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12,\n\x07item_no\x18\x96N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x32\n\x0ctree_node_id\x18\x97N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12?\n\x1aident_val_restr_by_pattern\x18\x98N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12.\n\x08quantity\x18\x99N \x01(\x0b\x32\x1b.dstore.values.integerValueBR\n\x1bio.dstore.engine.proceduresZ3gosdk.dstore.de/engine/procedures/om_GetTrolleys_Adb\x06proto3')
+  serialized_pb=_b('\n0dstore/engine/procedures/om_GetTrolleys_Ad.proto\x12\x1f\x64store.engine.om_GetTrolleys_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\x8a\x03\n\nParameters\x12\x39\n\x12\x66rom_date_and_time\x18\x01 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12 \n\x17\x66rom_date_and_time_null\x18\xe9\x07 \x01(\x08\x12\x37\n\x10to_date_and_time\x18\x02 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x1e\n\x15to_date_and_time_null\x18\xea\x07 \x01(\x08\x12@\n\x1bonly_for_identified_persons\x18\x03 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12)\n only_for_identified_persons_null\x18\xeb\x07 \x01(\x08\x12\x37\n\x12number_of_trolleys\x18\x04 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12 \n\x17number_of_trolleys_null\x18\xec\x07 \x01(\x08\"\xdc\x05\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12:\n\x03row\x18\x04 \x03(\x0b\x32-.dstore.engine.om_GetTrolleys_Ad.Response.Row\x12\x37\n\x12number_of_trolleys\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\xf7\x03\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12\x30\n\nvisitor_id\x18\x91N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x36\n\x11identifying_value\x18\x92N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12/\n\tperson_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12;\n\x13input_date_and_time\x18\x94N \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x34\n\x0eh_tree_node_id\x18\x95N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12,\n\x07item_no\x18\x96N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x32\n\x0ctree_node_id\x18\x97N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12?\n\x1aident_val_restr_by_pattern\x18\x98N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12.\n\x08quantity\x18\x99N \x01(\x0b\x32\x1b.dstore.values.IntegerValueBR\n\x1bio.dstore.engine.proceduresZ3gosdk.dstore.de/engine/procedures/om_GetTrolleys_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=173,
-  serialized_end=567,
+  serialized_start=135,
+  serialized_end=529,
 )
 
 
@@ -199,8 +198,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=1326,
+  serialized_start=761,
+  serialized_end=1264,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -250,8 +249,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=570,
-  serialized_end=1326,
+  serialized_start=532,
+  serialized_end=1264,
 )
 
 _PARAMETERS.fields_by_name['from_date_and_time'].message_type = dstore_dot_values__pb2._TIMESTAMPVALUE
@@ -268,8 +267,8 @@ _RESPONSE_ROW.fields_by_name['tree_node_id'].message_type = dstore_dot_values__p
 _RESPONSE_ROW.fields_by_name['ident_val_restr_by_pattern'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _RESPONSE_ROW.fields_by_name['quantity'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['number_of_trolleys'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS

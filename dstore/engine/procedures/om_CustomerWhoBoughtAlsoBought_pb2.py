@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/om_CustomerWhoBoughtAlsoBought.proto',
   package='dstore.engine.om_CustomerWhoBoughtAlsoBought',
   syntax='proto3',
-  serialized_pb=_b('\n=dstore/engine/procedures/om_CustomerWhoBoughtAlsoBought.proto\x12,dstore.engine.om_CustomerWhoBoughtAlsoBought\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xb4\x07\n\nParameters\x12\x36\n\x12variant_or_item_no\x18\x01 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12 \n\x17variant_or_item_no_null\x18\xe9\x07 \x01(\x08\x12=\n\x18include_sibling_variants\x18\x02 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12&\n\x1dinclude_sibling_variants_null\x18\xea\x07 \x01(\x08\x12\x30\n\tfrom_date\x18\x03 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x17\n\x0e\x66rom_date_null\x18\xeb\x07 \x01(\x08\x12.\n\x07to_date\x18\x04 \x01(\x0b\x32\x1d.dstore.values.timestampValue\x12\x15\n\x0cto_date_null\x18\xec\x07 \x01(\x08\x12\x30\n\x0bonly_active\x18\x05 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x19\n\x10only_active_null\x18\xed\x07 \x01(\x08\x12\x38\n\x13get_additional_info\x18\x06 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12!\n\x18get_additional_info_null\x18\xee\x07 \x01(\x08\x12@\n\x1b\x66ilter_by_characteristic_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12)\n filter_by_characteristic_id_null\x18\xef\x07 \x01(\x08\x12:\n\x16\x66ilter_by_charac_value\x18\x08 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12$\n\x1b\x66ilter_by_charac_value_null\x18\xf0\x07 \x01(\x08\x12<\n\x17negate_filter_by_params\x18\t \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12%\n\x1cnegate_filter_by_params_null\x18\xf1\x07 \x01(\x08\x12\x45\n include_variant_or_item_no_nodes\x18\n \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12.\n%include_variant_or_item_no_nodes_null\x18\xf2\x07 \x01(\x08\"\x8e\x06\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.om_CustomerWhoBoughtAlsoBought.Response.Row\x1a\xbd\x04\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12-\n\x08\x63\x61tegory\x18\x91N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12-\n\x07\x63ounter\x18\x92N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12-\n\x07node_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x32\n\x0ctree_node_id\x18\x94N \x01(\x0b\x32\x1b.dstore.values.integerValue\x12,\n\x07product\x18\x95N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12+\n\x06\x64omain\x18\x96N \x01(\x0b\x32\x1a.dstore.values.stringValue\x12<\n\x15\x63\x61tegory_tree_node_id\x18\xa1\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12-\n\x06\x61\x63tive\x18\xa2\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12/\n\x08level_no\x18\xa5\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12:\n\x13\x64omain_tree_node_id\x18\xa6\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12/\n\x08level_id\x18\xab\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.integerValueB_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/om_CustomerWhoBoughtAlsoBoughtb\x06proto3')
+  serialized_pb=_b('\n=dstore/engine/procedures/om_CustomerWhoBoughtAlsoBought.proto\x12,dstore.engine.om_CustomerWhoBoughtAlsoBought\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xb4\x07\n\nParameters\x12\x36\n\x12variant_or_item_no\x18\x01 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12 \n\x17variant_or_item_no_null\x18\xe9\x07 \x01(\x08\x12=\n\x18include_sibling_variants\x18\x02 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12&\n\x1dinclude_sibling_variants_null\x18\xea\x07 \x01(\x08\x12\x30\n\tfrom_date\x18\x03 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x17\n\x0e\x66rom_date_null\x18\xeb\x07 \x01(\x08\x12.\n\x07to_date\x18\x04 \x01(\x0b\x32\x1d.dstore.values.TimestampValue\x12\x15\n\x0cto_date_null\x18\xec\x07 \x01(\x08\x12\x30\n\x0bonly_active\x18\x05 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x19\n\x10only_active_null\x18\xed\x07 \x01(\x08\x12\x38\n\x13get_additional_info\x18\x06 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12!\n\x18get_additional_info_null\x18\xee\x07 \x01(\x08\x12@\n\x1b\x66ilter_by_characteristic_id\x18\x07 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12)\n filter_by_characteristic_id_null\x18\xef\x07 \x01(\x08\x12:\n\x16\x66ilter_by_charac_value\x18\x08 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12$\n\x1b\x66ilter_by_charac_value_null\x18\xf0\x07 \x01(\x08\x12<\n\x17negate_filter_by_params\x18\t \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12%\n\x1cnegate_filter_by_params_null\x18\xf1\x07 \x01(\x08\x12\x45\n include_variant_or_item_no_nodes\x18\n \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12.\n%include_variant_or_item_no_nodes_null\x18\xf2\x07 \x01(\x08\"\xf6\x05\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12G\n\x03row\x18\x04 \x03(\x0b\x32:.dstore.engine.om_CustomerWhoBoughtAlsoBought.Response.Row\x1a\xbd\x04\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x12-\n\x08\x63\x61tegory\x18\x91N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12-\n\x07\x63ounter\x18\x92N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12-\n\x07node_id\x18\x93N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x32\n\x0ctree_node_id\x18\x94N \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12,\n\x07product\x18\x95N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12+\n\x06\x64omain\x18\x96N \x01(\x0b\x32\x1a.dstore.values.StringValue\x12<\n\x15\x63\x61tegory_tree_node_id\x18\xa1\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12-\n\x06\x61\x63tive\x18\xa2\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12/\n\x08level_no\x18\xa5\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12:\n\x13\x64omain_tree_node_id\x18\xa6\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12/\n\x08level_id\x18\xab\x9c\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValueB_\n\x1bio.dstore.engine.proceduresZ@gosdk.dstore.de/engine/procedures/om_CustomerWhoBoughtAlsoBoughtb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -189,8 +188,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=1147,
+  serialized_start=161,
+  serialized_end=1109,
 )
 
 
@@ -297,8 +296,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1359,
-  serialized_end=1932,
+  serialized_start=1297,
+  serialized_end=1870,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -341,8 +340,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1150,
-  serialized_end=1932,
+  serialized_start=1112,
+  serialized_end=1870,
 )
 
 _PARAMETERS.fields_by_name['variant_or_item_no'].message_type = dstore_dot_values__pb2._STRINGVALUE
@@ -367,8 +366,8 @@ _RESPONSE_ROW.fields_by_name['level_no'].message_type = dstore_dot_values__pb2._
 _RESPONSE_ROW.fields_by_name['domain_tree_node_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.fields_by_name['level_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
 DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE

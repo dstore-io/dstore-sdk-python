@@ -14,17 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from dstore import values_pb2 as dstore_dot_values__pb2
-from dstore.engine import message_pb2 as dstore_dot_engine_dot_message__pb2
-from dstore.engine import metainformation_pb2 as dstore_dot_engine_dot_metainformation__pb2
+from dstore.engine import engine_pb2 as dstore_dot_engine_dot_engine__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dstore/engine/procedures/fo_ModifyForums_Ad.proto',
   package='dstore.engine.fo_ModifyForums_Ad',
   syntax='proto3',
-  serialized_pb=_b('\n1dstore/engine/procedures/fo_ModifyForums_Ad.proto\x12 dstore.engine.fo_ModifyForums_Ad\x1a\x13\x64store/values.proto\x1a\x1b\x64store/engine/message.proto\x1a#dstore/engine/metainformation.proto\"\xb9\x02\n\nParameters\x12-\n\x08\x66orum_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x16\n\rforum_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0blanguage_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.integerValue\x12\x19\n\x10language_id_null\x18\xea\x07 \x01(\x08\x12.\n\nforum_name\x18\x03 \x01(\x0b\x32\x1a.dstore.values.stringValue\x12\x18\n\x0f\x66orum_name_null\x18\xeb\x07 \x01(\x08\x12\x31\n\x0c\x64\x65lete_forum\x18\x04 \x01(\x0b\x32\x1b.dstore.values.booleanValue\x12\x1a\n\x11\x64\x65lete_forum_null\x18\xec\x07 \x01(\x08\"\x89\x02\n\x08Response\x12H\n\x10meta_information\x18\x02 \x03(\x0b\x32..dstore.engine.metainformation.MetaInformation\x12/\n\x07message\x18\x03 \x03(\x0b\x32\x1e.dstore.engine.message.Message\x12;\n\x03row\x18\x04 \x03(\x0b\x32..dstore.engine.fo_ModifyForums_Ad.Response.Row\x12-\n\x08\x66orum_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.integerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42S\n\x1bio.dstore.engine.proceduresZ4gosdk.dstore.de/engine/procedures/fo_ModifyForums_Adb\x06proto3')
+  serialized_pb=_b('\n1dstore/engine/procedures/fo_ModifyForums_Ad.proto\x12 dstore.engine.fo_ModifyForums_Ad\x1a\x13\x64store/values.proto\x1a\x1a\x64store/engine/engine.proto\"\xb9\x02\n\nParameters\x12-\n\x08\x66orum_id\x18\x01 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x16\n\rforum_id_null\x18\xe9\x07 \x01(\x08\x12\x30\n\x0blanguage_id\x18\x02 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x12\x19\n\x10language_id_null\x18\xea\x07 \x01(\x08\x12.\n\nforum_name\x18\x03 \x01(\x0b\x32\x1a.dstore.values.StringValue\x12\x18\n\x0f\x66orum_name_null\x18\xeb\x07 \x01(\x08\x12\x31\n\x0c\x64\x65lete_forum\x18\x04 \x01(\x0b\x32\x1b.dstore.values.BooleanValue\x12\x1a\n\x11\x64\x65lete_forum_null\x18\xec\x07 \x01(\x08\"\xf1\x01\n\x08Response\x12\x38\n\x10meta_information\x18\x02 \x03(\x0b\x32\x1e.dstore.engine.MetaInformation\x12\'\n\x07message\x18\x03 \x03(\x0b\x32\x16.dstore.engine.Message\x12;\n\x03row\x18\x04 \x03(\x0b\x32..dstore.engine.fo_ModifyForums_Ad.Response.Row\x12-\n\x08\x66orum_id\x18\x65 \x01(\x0b\x32\x1b.dstore.values.IntegerValue\x1a\x16\n\x03Row\x12\x0f\n\x06row_id\x18\x90N \x01(\x05\x42S\n\x1bio.dstore.engine.proceduresZ4gosdk.dstore.de/engine/procedures/fo_ModifyForums_Adb\x06proto3')
   ,
-  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_message__pb2.DESCRIPTOR,dstore_dot_engine_dot_metainformation__pb2.DESCRIPTOR,])
+  dependencies=[dstore_dot_values__pb2.DESCRIPTOR,dstore_dot_engine_dot_engine__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _PARAMETERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=175,
-  serialized_end=488,
+  serialized_start=137,
+  serialized_end=450,
 )
 
 
@@ -136,8 +135,8 @@ _RESPONSE_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=734,
-  serialized_end=756,
+  serialized_start=672,
+  serialized_end=694,
 )
 
 _RESPONSE = _descriptor.Descriptor(
@@ -187,8 +186,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=491,
-  serialized_end=756,
+  serialized_start=453,
+  serialized_end=694,
 )
 
 _PARAMETERS.fields_by_name['forum_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
@@ -196,8 +195,8 @@ _PARAMETERS.fields_by_name['language_id'].message_type = dstore_dot_values__pb2.
 _PARAMETERS.fields_by_name['forum_name'].message_type = dstore_dot_values__pb2._STRINGVALUE
 _PARAMETERS.fields_by_name['delete_forum'].message_type = dstore_dot_values__pb2._BOOLEANVALUE
 _RESPONSE_ROW.containing_type = _RESPONSE
-_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_metainformation__pb2._METAINFORMATION
-_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_message__pb2._MESSAGE
+_RESPONSE.fields_by_name['meta_information'].message_type = dstore_dot_engine_dot_engine__pb2._METAINFORMATION
+_RESPONSE.fields_by_name['message'].message_type = dstore_dot_engine_dot_engine__pb2._MESSAGE
 _RESPONSE.fields_by_name['row'].message_type = _RESPONSE_ROW
 _RESPONSE.fields_by_name['forum_id'].message_type = dstore_dot_values__pb2._INTEGERVALUE
 DESCRIPTOR.message_types_by_name['Parameters'] = _PARAMETERS
